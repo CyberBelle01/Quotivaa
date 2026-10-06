@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    
+}
+.header{
+    background-color: #1C6C97;
+    width: 100%;
+    height: 250px;
+}
+.nav{
+    background-color: #061D55;
+    width: 100%;
+    height: 250px;
+}
+.test{
+    background-color: #0235AD;
+    width: 100%;
+    height: 250px;
+}
+.color{
+    background-color: #89CFEF;
+    width: 100%;
+    height: 250px;
+
+}
