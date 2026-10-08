@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .login-container {
@@ -22,7 +23,6 @@ body {
     box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
     overflow: hidden;
 }
-
 
 .left-banner {
     flex: 1;
@@ -44,12 +44,12 @@ body {
 }
 
 .brand-logo img {
-    height: 35px;
+    height: 95px;
     width: auto;
 }
 
 .brand-logo h1 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -68,7 +68,6 @@ body {
     color: #cbd5e1;
     margin-top: 15px;
 }
-
 
 .right-form-area {
     flex: 1;
@@ -131,15 +130,10 @@ body {
     align-items: center;
 }
 
-.toggle-password-icon {
-    position: absolute;
-    right: 16px;
-    cursor: pointer;
-    color: #9ca3af;
-    font-size: 14px;
-}
-
 .btn-signin {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     width: 100%;
     background-color: #89CFEF; 
     color: white;
@@ -156,17 +150,49 @@ body {
     background-color: #0235AD;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .login-container {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        flex-direction: column;
-        box-shadow: none;
+        width: 768px;
+        height: 550px;
     }
 
     .left-banner {
-        display: none; /* Hides the dark picture layout column on phones entirely */
+        padding: 30px;
+    }
+
+    .brand-logo {
+        margin-bottom: 50px;
+    }
+
+    .quote-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        padding-top: 60px;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 440px;
+        height: auto;
+        flex-direction: column;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .left-banner {
+        display: none;
+    }
+
+    .right-form-area {
+        width: 100%;
+        background-color: white;
+        border-radius: 16px;
+        padding: 40px 30px;
+        box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
     }
 }

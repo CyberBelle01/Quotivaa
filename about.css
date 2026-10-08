@@ -1,24 +1,28 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     width: 100%;
     height: 100vh;
     background-color: white;
-    
 }
-header{
+
+header {
     height: 160px;
     width: 100%;
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
-.header-container{
+
+.header-container {
     width: 88%;
     height: 53%;
     background-color: #89CFEF;
@@ -26,63 +30,136 @@ header{
     display: flex;
     justify-content: center;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-
 }
-.header-wrapper{
-    
+
+.header-wrapper {
     height: 100%;
     width: 95%;
-    /* background-color: purple; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo{
+
+.logo {
     height: 100%;
     width: 200px;
-    /* background-color: gray; */
     display: flex;
-    justify-content: center;
-    & img{
-        width: 100%;
-        height: 100%;
-        
-    }
+    justify-content: flex-start;
+    align-items: center;
 }
-nav{
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.nav-links {
     height: 60%;
-    width: 45%;
-    /* background-color: chartreuse; */
+    width: 55%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    & a{
-        text-decoration: none;
-        font-family: sans-serif;
-        font-size: 19px;
-        color: #061D55;
-        cursor: pointer;
-    }
 }
-a:hover{
+
+.nav-links a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 19px;
+    color: #061D55;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
     color: #0235AD;
 }
-.button1{
-    padding: 13px 40px 13px 40px;
+
+.header-wrapper a.button-link {
+    display: inline-block;
+    background-color: white;
+    color: #0235AD;
+    text-decoration: none;
+    padding: 8px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.header-wrapper a.button-link:hover {
     background-color: #0235AD;
     color: white;
-    border-radius: 5px;
-    font-size: 18px;
+    transform: translateY(-1px);
+}
+
+.header-wrapper .mobile-menu-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    border: 1px solid transparent;
 }
 
-.button1:hover{
-    color: #0235AD;
-    border-color: #0235AD;
-    border-radius: 40px;
-    background-color: white;
-    transition-duration: 0.5s;
+.header-wrapper .mobile-menu-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
+@media (max-width: 1024px) {
+    header {
+        height: 130px;
+    }
+
+    .header-container {
+        width: 90%;
+        height: 60%;
+    }
+
+    .header-wrapper {
+        width: 92%;
+    }
+
+    .header-wrapper .nav-links {
+        display: none;
+    }
+
+    .header-wrapper .mobile-menu-icon {
+        display: flex;
+    }
+
+    .logo {
+        width: 160px;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 100px;
+    }
+
+    .header-container {
+        width: 92%;
+        height: 65%;
+        border-radius: 6px;
+    }
+
+    .header-wrapper {
+        width: 90%;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .header-wrapper .mobile-menu-icon img {
+        width: 28px;
+        height: 28px;
+    }
+}
