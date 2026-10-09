@@ -26,7 +26,7 @@ body {
 
 .left-banner {
     flex: 1;
-    background: linear-gradient(rgba(11, 15, 56, 0.5), rgba(11, 15, 56, 0.85)), url('background1.jpg');
+    background: linear-gradient(rgba(11, 15, 56, 0.5), rgba(11, 15, 56, 0.85)), url('background2.jpg');
     background-size: cover;
     background-position: center;
     padding: 40px;
