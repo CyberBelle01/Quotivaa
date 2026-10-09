@@ -100,7 +100,7 @@ a:hover{
 .our-team{
 
     width: 100%;
-    background-color: wh;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,7 +138,7 @@ a:hover{
     
 }
 .team-group{
-    background-color: #89CFEF;
+    background-color: white;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
@@ -156,10 +156,10 @@ a:hover{
         font-size: 25px;
         font-family: sans-serif;
         margin-top: 20px;
-        color: blue;
+        color: #0235AD;
     }
     & p{
-        color: white;
+        color: gray;
         margin-top: 10px;
         font-size: 18px;
     }
@@ -180,6 +180,339 @@ a:hover{
     height: 100%;
     width: 100%;
 }
+
+
+/* CONTACT SECTION */
+
+
+.contact-section {
+    width: 90%;
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+    display: grid;
+    grid-template-columns: 1.8fr 0.9fr;
+    gap: 40px;
+    align-items: start;
+    /* background-color: aqua; */
+}
+
+.contact-form {
+    width: 100%;
+    background-color: whitesmoke;
+    border: 1px solid #0235AD;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    font-family: sans-serif;
+    font-size: 26px;
+    color: #061D55;
+    margin-bottom: 8px;
+}
+
+.contact-intro {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #061D55;
+    margin-bottom: 8px;
+}
+
+.input-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #0235AD;
+    border-radius: 6px;
+
+    font-family: sans-serif;
+    font-size: 14px;
+
+    outline: none;
+    background-color: white;
+}
+
+.input-group input {
+    height: 45px;
+}
+
+
+/* RIGHT-HAND CONTACT INFORMATION CARD */
+
+.contact-information {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 30px 25px;
+    border-radius: 10px;
+    height: 440px;
+    border: 1px solid #0235AD;
+}
+
+
+.contact-information h3 {
+    font-family: sans-serif;
+    font-size: 25px;
+    color: #061D55;
+    margin-bottom: 30px;
+}
+
+/* EACH INFORMATION ROW */
+
+.information-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+/* LEFT-SIDE ICON */
+
+.information-icon {
+    width: 30px;
+    min-width: 30px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* TEXT BESIDE THE ICON */
+
+.information-text {
+    min-width: 0;
+}
+
+.information-text h4 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #061D55;
+    margin-bottom: 7px;
+}
+
+.information-text p {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* SOCIAL MEDIA ICONS */
+
+.contact-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contact-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-socials img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.contact-socials a:hover img {
+    transform: translateY(-3px);
+}
+
+
+
+
+.input-group textarea:focus {
+    border-color: #0235AD;
+}
+
+
+
+.send-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 13px 22px;
+
+    background-color: #0235AD;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-family: sans-serif;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-button:hover {
+    background-color: #061D55;
+}
+
+.footer {
+    width: 100%;
+    background-color: #89CFEF;
+    color: black;
+    margin-top: 20px;
+    padding: 25px 0 0;
+    
+}
+
+/* MAIN FOOTER CONTAINER */
+
+.footer-container {
+    width: 90%;
+    max-width: 1310px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.footer-brand img {
+    width: 150px;
+    /* max-width: 100%; */
+    height: 100px;
+    object-fit: fill;
+    display: block;
+    /* background-color: chartreuse; */
+    
+}
+
+.footer-brand p {
+    max-width: 350px;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    color: black;
+    margin-top: 15px;
+}
+
+.footer-links h3,
+.footer-socials h3 {
+    font-family: sans-serif;
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #0235AD;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-links a {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0235AD;
+    padding-left: 5px;
+}
+
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.social-icons img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.social-icons a:hover {
+    background-color: #0235AD;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1310px;
+    margin: 0 auto;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #0235AD;
+}
+
+
+
+
+
+
+
+
+    
+
 
 
     
@@ -224,9 +557,224 @@ a:hover{
         display: block;
     }
 
-    /* CONTACT */
+    
+    /* OUR TEAM SECTION - MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 767px) {
+
+    .our-team {
+        width: 100%;
+        padding: 130px 0 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .eyebrow {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .our-team h1 {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .our-team > p {
+        width: 90%;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+   
+    .team-container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+   
+
+    .team-group {
+        width: 100%;
+        height: auto;
+        padding-bottom: 25px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    
+
+    .team-members {
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+    }
+
+    .team-members img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .team-group h3 {
+        font-size: 23px;
+        margin-top: 18px;
+        text-align: center;
+    }
+
+    .team-group h5 {
+        font-size: 17px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .team-group p {
+        width: 85%;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .team-group > img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        margin-top: 15px;
+    }
+    .footer {
+        padding-top: 35px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-bottom: 25px;
+    }
+
+    .footer-brand p {
+        font-size: 13px;
+    }
+
+    .footer-links h3,
+    .footer-socials h3 {
+        margin-bottom: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
 
 
+}
+}
+/* OUR TEAM SECTION - TABLET RESPONSIVENESS */
+
+@media screen and (min-width: 768px) and (max-width: 1044px) {
+
+    .our-team {
+        width: 100%;
+        padding: 40px 0 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .eyebrow {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .our-team h1 {
+        font-size: 40px;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .our-team p {
+        width: 85%;
+        font-size: 17px;
+        line-height: 1.7;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .team-container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+     .team-group {
+        width: 100%;
+        height: auto;
+        padding-bottom: 25px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .team-group:nth-child(3) {
+        grid-column: 1 / -1;
+        width: 55%;
+        justify-self: center;
+    }
+
+    .team-members {
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+    }
+
+    .team-members img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .team-group h3 {
+        font-size: 25px;
+        margin-top: 18px;
+        text-align: center;
+    }
+    .team-group h5 {
+        font-size: 19px;
+        margin-top: 12px;
+        text-align: center;
+    }
+    .team-group p {
+        width: 85%;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .team-group > img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        margin-top: 15px;
+    }
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 25px;
+    }
+
+    .footer-brand img {
+        width: 125px;
+    }
+
+    .footer-brand p {
+        font-size: 13px;
+    }
 }
 
 
