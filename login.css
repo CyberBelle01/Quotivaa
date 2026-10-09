@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f3f4f6;
-    min-height: 100vh;
+    background-color: whitesmoke;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 .login-container {
     display: flex;
     width: 900px;
-    height: 600px;
+    height: 550px;
     background-color: white;
     border-radius: 16px;
     box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
@@ -43,13 +43,9 @@ body {
     margin-bottom: 80px;
 }
 
-.brand-logo img {
-    height: 95px;
-    width: auto;
-}
 
 .brand-logo h1 {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -72,29 +68,41 @@ body {
 .right-form-area {
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 40px;
+    padding: 20px; 
+    overflow: hidden; 
 }
 
 .form-wrapper {
     width: 100%;
-    max-width: 340px;
+    max-width: 320px; 
+}
+
+.form-wrapper img {
+    height: 160px; 
+    width: auto;
+    display: block;
+    margin: 0 auto 5px auto; 
 }
 
 .right-form-area h2 {
     color: #1e1b4b;
-    font-size: 24px;
+    font-size: 32px; 
     font-weight: 700;
-    margin-bottom: 8px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 6px; 
 }
 
 .subtitle {
-    font-size: 13px;
+    font-size: 12px;
     color: #6b7280;
     line-height: 1.4;
-    margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 25px; 
 }
+
 
 .input-group {
     margin-bottom: 20px;
