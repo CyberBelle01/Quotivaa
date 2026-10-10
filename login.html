@@ -15,20 +15,19 @@
                 <div class="brand-logo" id="brand-logo">
                     <h1>Quotivaa</h1>
                 </div>
-                <blockquote class="quote-text">
+                <blockquote class="quote-text" id="quote-text">
                     "It is never too late to be what you might have been."
-                    <span class="quote-author">— George Eliot</span>
+                    <span class="quote-author" id="quote-author">— George Eliot</span>
                 </blockquote>
             </div>
         </div>
 
         <div class="right-form-area" id="right-form-area">
             <div class="form-wrapper" id="form-wrapper">
-                <img src="logo.png" alt="Quotivaa Logo">
+                <img src="logo.png" alt="Quotivaa Logo" class="form-logo" id="form-logo">
                 <h2>Welcome back</h2>
                 <p class="subtitle" id="subtitle">Sign in to continue to your personal quote experience.</p>
-
-                <form>
+                <form action="generator.html">
                     <div class="input-group" id="input-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" placeholder="you@example.com" required>
@@ -40,8 +39,12 @@
                             <input type="password" id="password" placeholder="Enter your password" required>
                         </div>
                     </div>
-                    
-                    <a href="generator.html" class="btn-signin">Sign In → </a>
+                    <button type="submit" class="btn-signin" id="btn-signin">Sign In →</button>
+                    <div class="divider" id="divider"><span>or</span></div>
+                    <p class="signup-footer" id="signup-footer">
+                        Don't have an account? <br>
+                        <a href="sign-up.html" class="link-signup" id="link-signup">Sign Up</a>
+                    </p>
                 </form>
             </div>
         </div>
