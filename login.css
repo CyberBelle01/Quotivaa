@@ -43,7 +43,6 @@ body {
     margin-bottom: 80px;
 }
 
-
 .brand-logo h1 {
     font-size: 40px;
     font-weight: 700;
@@ -68,7 +67,7 @@ body {
 .right-form-area {
     flex: 1;
     display: flex;
-    align-items: flex-start;
+    align-items: center; 
     justify-content: center;
     padding: 20px; 
     overflow: hidden; 
@@ -79,16 +78,16 @@ body {
     max-width: 320px; 
 }
 
-.form-wrapper img {
-    height: 160px; 
+.form-logo {
+    height: 120px; 
     width: auto;
     display: block;
-    margin: 0 auto 5px auto; 
+    margin: 0 auto 12px auto; 
 }
 
 .right-form-area h2 {
     color: #1e1b4b;
-    font-size: 32px; 
+    font-size: 28px; 
     font-weight: 700;
     text-align: center;
     margin-top: 0;
@@ -102,7 +101,6 @@ body {
     text-align: center;
     margin-bottom: 25px; 
 }
-
 
 .input-group {
     margin-bottom: 20px;
@@ -139,16 +137,16 @@ body {
 }
 
 .btn-signin {
-    display: inline-block;
+    display: block;
     text-align: center;
-    text-decoration: none;
     width: 100%;
+    box-sizing: border-box;
     background-color: #89CFEF; 
     color: white;
-    border: none;
     padding: 12px;
     font-size: 14px;
     font-weight: 600;
+    font-family: inherit;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -156,6 +154,43 @@ body {
 
 .btn-signin:hover {
     background-color: #0235AD;
+}
+
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.divider span {
+    background-color: white;
+    padding: 0 10px;
+    color: #9ca3af;
+    font-size: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.signup-footer {
+    text-align: center;
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.link-signup {
+    display: inline-block;
+    margin-top: 4px;
+    width: 100%;
+    border-radius: 8px;
+    color: #1e1b4b;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.link-signup:hover {
+   text-decoration: underline;
 }
 
 @media (max-width: 1024px) {
@@ -204,3 +239,4 @@ body {
         box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
     }
 }
+
