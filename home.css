@@ -100,18 +100,18 @@ width: 100%;
 min-height: 500px;
 background-color: skyblue;
 
-/* background: */
+/* background:
     linear-gradient(
         rgba(255, 255, 255, 0.15),
         rgba(255, 255, 255, 0.15)
     ),
     url('image.png');
 
-/* background-size: cover; */
-/* background-position: center; */
-/* background-repeat: no-repeat; */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 display: flex;
-align-items: center;
+align-items: center; */
 
 
 }
@@ -330,22 +330,35 @@ font-size: 21px;
 .moment-motivation {
     grid-column: 1;
     grid-row: 1 / 3;
-    background: #e9d5c5;
+    background: #DCEEFF;
+    /* background:
+    linear-gradient(
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.15)
+    ),
+    url('image.png');
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+align-items: flex-start; */
+
 }
 .moment-selflove {
     grid-column: 2;
     grid-row: 1;
-    background: #f1e6df;
+    background: #F5F5F5;
 }
 .moment-growth {
     grid-column: 2;
     grid-row: 2;
-    background: #e2e4d5;
+    background: #EAF5FF;
 }
 .moment-wisdom {
     grid-column: 1 / 3;
     grid-row: 3;
-    background: grey;
+    background: lightgrey;
 }
 .moment-number {
     font-size: 11px;
@@ -404,6 +417,135 @@ font-size: 21px;
 .moment-wisdom .moment-content {
     max-width: 650px;
 }
+
+/* QUOTE THAT STAYS WITH YOU */
+.featured-quote-section {
+    padding:  7%;
+    /* background: linear-gradient(
+        135deg,
+        #f5e9df 0%,
+        #e6d2c8 45%,
+        #d5b9aa 100%
+    ); */
+    color: #38251f;
+    background-color: lightgrey;
+}
+.featured-quote-container {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    padding: 65px 40px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 28px;
+    text-align: center;
+    background-color: #89CFEF;
+}
+.featured-label {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    color: #806154;
+}
+.featured-quote-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+.featured-quote-content h2 {
+    margin: 0 0 28px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #806154;
+}
+.featured-quote-text {
+    margin: 0 auto 25px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4.5vw, 55px);
+    line-height: 1.3;
+    letter-spacing: -1px;
+}
+.featured-quote-author {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #76584a;
+}
+.featured-divider {
+    display: block;
+    width: 45px;
+    height: 2px;
+    margin: 28px auto;
+    background: #a77e6c;
+}
+.featured-quote-caption {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #76584a;
+}
+.floating-quote {
+    position: absolute;
+    z-index: 1;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(100px, 15vw, 190px);
+    line-height: 1;
+    color: rgba(117, 78, 62, 0.17);
+    user-select: none;
+    pointer-events: none;
+    animation: quoteFloat 5s ease-in-out infinite;
+}
+.quote-top {
+    top: 30px;
+    left: 8%;
+}
+.quote-left {
+    top: 42%;
+    left: 2%;
+    font-size: 110px;
+    animation-delay: 1s;
+}
+.quote-right {
+    right: 4%;
+    bottom: 12%;
+    font-size: 150px;
+    animation-delay: 2s;
+}
+.quote-bottom {
+    right: 15%;
+    top: 5%;
+    font-size: 90px;
+    animation-delay: 1.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* RESPONSIVENESS */
 @media (max-width:767px){
