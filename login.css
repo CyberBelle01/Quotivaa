@@ -45,9 +45,10 @@ body {
 
 
 .brand-logo h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     letter-spacing: 0.5px;
+    
 }
 
 .quote-text {
@@ -84,11 +85,12 @@ body {
     width: auto;
     display: block;
     margin: 0 auto 5px auto; 
+    
 }
 
 .right-form-area h2 {
-    color: #1e1b4b;
-    font-size: 32px; 
+    color: black;
+    font-size: 40px; 
     font-weight: 700;
     text-align: center;
     margin-top: 0;
@@ -96,7 +98,7 @@ body {
 }
 
 .subtitle {
-    font-size: 12px;
+    font-size: 13px;
     color: #6b7280;
     line-height: 1.4;
     text-align: center;
