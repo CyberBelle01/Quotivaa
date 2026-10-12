@@ -334,19 +334,19 @@ font-size: 21px;
 .moment-motivation {
     grid-column: 1;
     grid-row: 1 / 3;
-    background: #DCEEFF;
-    /* background:
+    /* background: #DCEEFF; */
+    background:
     linear-gradient(
         rgba(255, 255, 255, 0.15),
         rgba(255, 255, 255, 0.15)
     ),
-    url('image.png');
+    url('motivation.png');
 
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 display: flex;
-align-items: flex-start; */
+align-items: flex-start;
 
 }
 .moment-selflove {
@@ -432,7 +432,7 @@ align-items: flex-start; */
         #d5b9aa 100%
     ); */
     color: #38251f;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 .featured-quote-container {
     position: relative;
@@ -700,6 +700,7 @@ align-items: flex-start; */
     font-size: clamp(36px, 5vw, 58px);
     line-height: 1.15;
     letter-spacing: -1.8px;
+    color: lightskyblue;
 }
 .inspire-content p {
     max-width: 530px;
@@ -717,7 +718,7 @@ align-items: flex-start; */
     gap: 22px;
     border: 1px solid #38251f;
     border-radius: 6px;
-    background: #38251f;
+    background: #0235AD;
     color: #fffaf5;
     font-size: 13px;
     font-weight: 600;
