@@ -534,8 +534,10 @@ a:hover{
 
 
 /* RESPONSIVENESS */
-@media (max-width:767px){
-     header {
+
+
+@media(max-width: 767px) {
+    header {
         height: 100px;
         position: fixed;
     }
@@ -559,10 +561,6 @@ a:hover{
     }
 
     
-    /* OUR TEAM SECTION - MOBILE RESPONSIVENESS */
-
-@media screen and (max-width: 767px) {
-
     .our-team {
         width: 100%;
         padding: 130px 0 50px;
@@ -597,9 +595,6 @@ a:hover{
         gap: 25px;
         margin-top: 30px;
     }
-
-   
-
     .team-group {
         width: 100%;
         height: auto;
@@ -607,15 +602,11 @@ a:hover{
         border-radius: 12px;
         overflow: hidden;
     }
-
-    
-
     .team-members {
         width: 100%;
         height: 280px;
         overflow: hidden;
     }
-
     .team-members img {
         width: 100%;
         height: 100%;
@@ -627,13 +618,11 @@ a:hover{
         margin-top: 18px;
         text-align: center;
     }
-
     .team-group h5 {
         font-size: 17px;
         margin-top: 10px;
         text-align: center;
     }
-
     .team-group p {
         width: 85%;
         font-size: 15px;
@@ -647,6 +636,32 @@ a:hover{
         object-fit: contain;
         margin-top: 15px;
     }
+    /* CONTACT */
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .contact-form,
+    .contact-information {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .information-text {
+        min-width: 0;
+    }
+    .information-text p {
+        overflow-wrap: anywhere;
+    }
+
     .footer {
         padding-top: 35px;
     }
@@ -671,10 +686,10 @@ a:hover{
         text-align: center;
         gap: 8px;
     }
-
+    
 
 }
-}
+
 /* OUR TEAM SECTION - TABLET RESPONSIVENESS */
 
 @media screen and (min-width: 768px) and (max-width: 1044px) {
