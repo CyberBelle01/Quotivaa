@@ -16,6 +16,10 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     height: 160px;
     width: 100%;
     display: flex;
@@ -101,7 +105,7 @@ a:hover {
 
 .landing-main {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 150px auto 0 auto ;
     padding: 40px 6%;
 }
 
@@ -196,22 +200,19 @@ a:hover {
     color: #cbd5e1;
     line-height: 1.5;
 }
-/* ========================================== */
-/* BASE FOOTER REDESIGN                       */
-/* ========================================== */
+
 .footer {
     width: 100%;
-    background-color: #f0f7fc; /* A softer, elegant light-blue pastel background */
-    color: #2c3e50; /* A dark slate instead of harsh pure black */
-    margin-top: 60px; /* More breathing room from the content above */
-    padding: 60px 0 0; /* Expanded top padding for a clean, spacious look */
-    border-top: 1px solid #dbe9f4; /* Clean subtle top border line */
+    background-color: #f0f7fc; 
+    color: #2c3e50; 
+    margin-top: 60px; 
+    padding: 60px 0 0; 
+    border-top: 1px solid #dbe9f4; 
 }
 
-/* MAIN FOOTER CONTAINER */
 .footer-container {
     width: 90%;
-    max-width: 1200px; /* Standardized modern container width */
+    max-width: 1200px; 
     margin: 0 auto;
     padding-bottom: 50px;
 
@@ -222,7 +223,7 @@ a:hover {
 }
 
 .footer-brand img {
-    height: 120px; /* Reduced to standard header/footer proportional sizing */
+    height: 120px; 
     width: auto;
     object-fit: contain;
     display: block;
@@ -233,8 +234,7 @@ a:hover {
     font-family: 'Segoe UI', system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #5a6e7f; /* Slightly muted for description text hierarchy */
-    margin-top: 20px;
+    color: #5a6e7f;     margin-top: 20px;
 }
 
 .footer-links h3,
@@ -243,8 +243,7 @@ a:hover {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    text-transform: uppercase; /* Professional, punchy section headers */
-    margin-bottom: 25px;
+    text-transform: uppercase;     margin-bottom: 25px;
     color: #0235AD;
 }
 
@@ -265,8 +264,7 @@ a:hover {
 
 .footer-links a:hover {
     color: #0235AD;
-    transform: translateX(4px); /* Sleek, smooth shifting animation */
-}
+    transform: translateX(4px); }
 
 .social-icons {
     display: flex;
@@ -278,9 +276,7 @@ a:hover {
     width: 40px;
     height: 40px;
     background-color: white;
-    border: 1px solid #dbe9f4; /* Clean container frame */
-    border-radius: 10px; /* Smooth rounded square look instead of hard circles */
-
+    border: 1px solid #dbe9f4;     border-radius: 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -291,8 +287,7 @@ a:hover {
     width: 20px;
     height: 20px;
     object-fit: contain;
-    /* Soft tint effect for social images */
-    filter: invert(15%) sepia(85%) saturate(3000%) hue-rotate(215deg) brightness(85%) contrast(100%); 
+        filter: invert(15%) sepia(85%) saturate(3000%) hue-rotate(215deg) brightness(85%) contrast(100%); 
     transition: filter 0.3s ease;
 }
 
@@ -300,20 +295,15 @@ a:hover {
     background-color: #0235AD;
     border-color: #0235AD;
     transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(2, 53, 173, 0.15); /* Soft premium shadow drop */
-}
+    box-shadow: 0 6px 12px rgba(2, 53, 173, 0.15); }
 
-/* Makes social icons turn bright white on container hover */
 .social-icons a:hover img {
     filter: brightness(0) invert(1);
 }
 
-/* COPYRIGHT SECTION */
 .footer-bottom {
-    width: 100%; /* Spans full width of background container */
-    border-top: 1px solid #e2edf5;
-    background-color: #ecf3f8; /* Balanced dual-tone color change for depth */
-}
+    width: 100%;     border-top: 1px solid #e2edf5;
+    background-color: #ecf3f8; }
 
 .footer-bottom-inner {
     width: 90%;
@@ -337,12 +327,8 @@ a:hover {
 
 
 
-/* ========================================== */
-/* TABLET LAYOUT (768px to 1024px)            */
-/* ========================================== */
 @media (min-width: 768px) and (max-width: 1024px) {
-    /* Existing Header/Hero Code */
-    header {
+        header {
         height: 130px;
     }
 
@@ -366,27 +352,20 @@ a:hover {
         font-size: 38px;
     }
 
-    /* New Footer Tablet Code */
-    .footer-container {
-        grid-template-columns: 1fr 1fr; /* Drops from 3 columns to 2 */
-        gap: 40px 20px;
+        .footer-container {
+        grid-template-columns: 1fr 1fr;         gap: 40px 20px;
     }
 
     .footer-brand {
-        grid-column: span 2; /* Brand section stretches fully across the top */
-    }
+        grid-column: span 2;     }
     
     .footer-brand p {
         max-width: 100%;
     }
 }
 
-/* ========================================== */
-/* MOBILE LAYOUT (Max-width 767px)            */
-/* ========================================== */
 @media (max-width: 767px) {
-    /* Combined Existing Mobile & 768px/480px Layout Rules */
-    header {
+        header {
         height: 100px;
     }
 
@@ -435,9 +414,9 @@ a:hover {
         height: 200px;
     }
 
-    /* New Footer Mobile Code */
+    
     .footer-container {
-        grid-template-columns: 1fr; /* Stacks all footer parts in 1 column */
+        grid-template-columns: 1fr; 
         gap: 30px;
     }
 
@@ -450,7 +429,7 @@ a:hover {
     }
 
     .footer-bottom {
-        flex-direction: column; /* Stacks copyright content vertically */
+        flex-direction: column; 
         text-align: center;
         align-items: center;
     }
