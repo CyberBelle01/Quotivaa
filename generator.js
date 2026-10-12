@@ -213,6 +213,7 @@ function generateQuote() {
     const randomQuote = quotes[randomIndex];
     quoteText.textContent = randomQuote.text;
     quoteAuthor.textContent = "- " + randomQuote.author;
+    
 }
 
 generateQuote();
