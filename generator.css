@@ -1,30 +1,24 @@
-* {
+*{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
-body {
+body{
     width: 100%;
     min-height: 100vh;
     background-color: white;
+    
 }
-
-/* HEADER */
-
-header {
+header{
     height: 160px;
     width: 100%;
+    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    /* position: fixed; */
 }
-
-.header-container {
+.header-container{
     width: 88%;
     height: 53%;
     background-color: #89CFEF;
@@ -32,50 +26,50 @@ header {
     display: flex;
     justify-content: center;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
 
-.header-wrapper {
+}
+.header-wrapper{
+    
     height: 100%;
     width: 95%;
+    /* background-color: purple; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.logo {
+.logo{
     height: 200px;
     width: 200px;
+    /* background-color: gray; */
     display: flex;
     justify-content: center;
+    & img{
+        width: 100%;
+        height: 100%;
+        
+    }
 }
-
-.logo img {
-    width: 100%;
-    height: 100%;
-}
-
-nav {
+nav{
     height: 60%;
     width: 45%;
+    /* background-color: chartreuse; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
-nav a {
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 19px;
-    color: #061D55;
-    cursor: pointer;
+    & a{
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: 19px;
+        color: #061D55;
+        cursor: pointer;
+    }
 }
-
-nav a:hover {
+a:hover{
     color: #0235AD;
 }
-
-.button1 {
-    padding: 13px 40px;
+.button1{
+    padding: 13px 40px 13px 40px;
     background-color: #0235AD;
     color: white;
     border-radius: 5px;
@@ -84,47 +78,48 @@ nav a:hover {
     border: 1px solid transparent;
 }
 
-.button1:hover {
+.button1:hover{
     color: #0235AD;
     border-color: #0235AD;
     border-radius: 40px;
     background-color: white;
     transition-duration: 0.5s;
 }
+.hamburger{
+    width: 30px;
+    height: 30px;
+    display: none;
+    color: #059669;
+}
 
 
-/* GENERATOR */
+
 
 .generator {
     background-color: #89CFEF;
     width: 100%;
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap: 20px;
-
-    /* Space for the fixed header */
-    padding-top: 190px;
+    padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .generator h1 {
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 45px;
+    font-weight: 900;
     color: #0235AD;
 }
 
 .generator > p {
-    font-size: 17px;
+    font-size: 20px;
     color: black;
 }
 
 
-/* QUOTE BOX */
 
 .quote-hold {
     width: min(80%, 1000px);
@@ -149,21 +144,20 @@ nav a:hover {
 
 .quotes {
     width: 100%;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.6;
-    color: #0235AD;
+    color: #143d9f;
     text-align: center;
 }
 
 .author {
     width: 100%;
-    font-size: 19px;
+    font-size: 20px;
     color: black;
     text-align: right;
 }
 
 
-/* GENERATE BUTTON */
 
 .button {
     height: 50px;
