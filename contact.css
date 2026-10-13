@@ -15,7 +15,7 @@ body{
 header{
     height: 15vh;
     width: 100%;
-    /* background-color: red; */
+    /* background-color: #89CFEF; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ header{
 .header-container{
     width: 88%;
     height: 53%;
-    background-color: #89CFEF;
+    background-color: white;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -37,7 +37,6 @@ header{
 
 }
 .header-wrapper{
-    
     height: 100%;
     width: 95%;
     /* background-color: purple; */
@@ -96,7 +95,7 @@ a:hover{
     width: 30px;
     height: 30px;
     display: none;
-    color: #059669;
+    
 }
 
 /* TEAM SECTION */
