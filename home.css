@@ -5,10 +5,10 @@
 }
 body{
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     background-color: white;
-    
 }
+
 header{
     height: 160px;
     width: 100%;
@@ -208,11 +208,9 @@ font-size: 21px;
 .heroImg {
     flex: 1;
     min-width: 0;
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
     padding-right: 10px;
 }
 .quote-card {
