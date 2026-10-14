@@ -5,12 +5,12 @@
 }
 body{
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     background-color: white;
-    
 }
+
 header{
-    height: 160px;
+    height: 15vh;
     width: 100%;
     /* background-color: #89CFEF; */
     display: flex;
@@ -32,7 +32,6 @@ header{
 
 }
 .header-wrapper{
-    
     height: 100%;
     width: 95%;
     /* background-color: purple; */
@@ -58,12 +57,12 @@ nav{
     /* background-color: chartreuse; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     & a{
         text-decoration: none;
         font-family: sans-serif;
-        font-size: 19px;
+        font-size: 16px;
         color: #061D55;
         cursor: pointer;
     }
@@ -72,7 +71,7 @@ a:hover{
     color: #0235AD;
 }
 .button1{
-    padding: 13px 40px 13px 40px;
+    padding: 10px 20px 10px 20px;
     background-color: #0235AD;
     color: white;
     border-radius: 5px;
@@ -84,7 +83,7 @@ a:hover{
 .button1:hover{
     color: #0235AD;
     border-color: #0235AD;
-    border-radius: 40px;
+    border-radius: 5px;
     background-color: white;
     transition-duration: 0.5s;
 }
@@ -92,16 +91,16 @@ a:hover{
     width: 30px;
     height: 30px;
     display: none;
-    color: #059669;
+    
 }
 
 
 /* HERO SECTION */
 
 .hero {
-    margin-top: 150px;
+margin-top: 80px;
 width: 100%;
-min-height: 500px;
+height: 85vh;
 /* background-color: skyblue; */
 
 background:
@@ -116,30 +115,19 @@ background-position: center;
 background-repeat: no-repeat;
 display: flex;
 align-items: center;
-
-
 }
-
-/* HERO CONTAINER */
-
 .heroContainer {
 width: 85%;
 /* max-width: 1200px; */
 margin: 0 auto;
 display: flex;
 align-items: center;
-/* background-color: whitesmoke; */
-
+/* background-color: red; */
 }
-
-/* HERO TEXT */
-
 .herotext {
 width: 60%;
 max-width: 650px;
-
 }
-
 .hero-tagline {
 display: inline-block;
 font-family: sans-serif;
@@ -150,9 +138,8 @@ margin-bottom: 20px;
 color: white;
 
 }
-
 .herotext h1 {
-font-family: Georgia, serif;
+font-family: sans-serif;
 font-size: 65px;
 font-weight: 700;
 line-height: 1.2;
@@ -160,13 +147,11 @@ color: black;
 margin-bottom: 22px;
 
 }
-
 .herotext h1 span {
 display: block;
 color: #0235AD;
 font-weight: 700px;
 }
-
 .herotext p {
 font-family: sans-serif;
 font-size: 20px;
@@ -177,7 +162,6 @@ max-width: 500px;
 margin-bottom: 30px;
 
 }
-
 .hero-button {
 display: inline-flex;
 align-items: center;
@@ -193,7 +177,6 @@ border-radius: 5px;
 border: 1px solid #0235AD;
 transition: 0.3s ease;
 
-
 }
 .hero-button:hover {
 background-color: white;
@@ -204,86 +187,33 @@ font-size: 21px;
 }
 
 /* RIGHT SIDE QUOTE */
-
-.heroImg {
-    flex: 1;
-    min-width: 0;
-
+.heroImg{
+    height: 100%;
+    width: 35%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-    padding-right: 10px;
+    background-color: red;
 }
-.quote-card {
-    position: relative;
-    width: 100%;
-    max-width: 390px;
-    min-height: 350px;
-    padding: 42px;
-    box-sizing: border-box;
-    background-color: #FFFDF7;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    box-shadow: 0 18px 45px rgba(6, 29, 85, 0.20);
-    transform: rotate(1deg);
-}
-.quote-card::after {
-    content: "";
-    position: absolute;
-    bottom: -24px;
-    left: 55px;
-    width: 0;
-    height: 0;
-    border-top: 25px solid #FFFDF7;
-    border-right: 24px solid transparent;
-    border-left: 5px solid transparent;
-}
-.quote-mark {
-    font-family: Georgia, serif;
-    font-size: 85px;
-    line-height: 0.8;
-
-    color: #89CFEF;
-}
-.quote-card .quote-text {
-    font-family: Georgia, serif;
-    font-size: 29px;
-    font-weight: bold;
-    line-height: 1.5;
-    color: #061D55;
-    margin: 22px 0;
-}
-.quote-line {
-    width: 48px;
-    height: 3px;
-    background-color: #89CFEF;
-    margin-bottom: 20px;
-}
-.quote-author {
-    font-family: sans-serif;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 2px;
-
-    color: #315C85;
+.heroImg img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
 }
 
 /* FIND YOUR MOMENT SECTION */
 .moments-section {
-    padding: 100px 7%;
-    background: #faf7f2;
-    color: #38251f;
+    /* padding: 100px 7%; */
+    /* background-color: grey; */
+    color: black;
+    height: 100vh;
+    width: 100%;
 }
 .moments-container {
-    max-width: 1250px;
+    width: 85%;
     margin: 0 auto;
 }
 .moments-heading {
-    max-width: 650px;
     margin-bottom: 50px;
 }
 .moments-label {
@@ -295,10 +225,9 @@ font-size: 21px;
     letter-spacing: 2px;
 }
 .moments-heading h2 {
-    margin: 0 0 20px;
-    font-size: clamp(34px, 4vw, 52px);
+    font-size: 40px;
     line-height: 1.15;
-    letter-spacing: -1.5px;
+    
 }
 .moments-heading p {
     max-width: 520px;
@@ -311,22 +240,25 @@ font-size: 21px;
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     grid-template-rows: 240px 220px 190px;
-    gap: 20px;
+    /* gap: 20px; */
+    /* background-color: red; */
+    margin-top: 5px;
+    width: 100%;
+    height: 30%;
 }
 .moment-card {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 0;
     padding: 28px;
     overflow: hidden;
     border: 1px solid rgba(74, 48, 38, 0.07);
-    border-radius: 20px;
+    border-radius: 10px;
     text-decoration: none;
     color: #38251f;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+}   
 .moment-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 15px 35px rgba(56, 37, 31, 0.09);
@@ -347,23 +279,26 @@ background-position: center;
 background-repeat: no-repeat;
 display: flex;
 align-items: flex-start;
+height: 400px;
 
 }
 .moment-selflove {
     grid-column: 2;
     grid-row: 1;
     background: #F5F5F5;
+    height: 200px;
 }
 .moment-growth {
     grid-column: 2;
     grid-row: 2;
     background: #EAF5FF;
+    height: 200px;
 }
-.moment-wisdom {
+/* .moment-wisdom {
     grid-column: 1 / 3;
     grid-row: 3;
     background: lightgrey;
-}
+} */
 .moment-number {
     font-size: 11px;
     font-weight: 700;
@@ -401,38 +336,16 @@ align-items: flex-start;
     line-height: 1.8;
     opacity: 0.8;
 }
-.moment-arrow {
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    display: grid;
-    width: 38px;
-    height: 38px;
-    place-items: center;
-    border: 1px solid rgba(56, 37, 31, 0.2);
-    border-radius: 50%;
-    font-size: 19px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-.moment-card:hover .moment-arrow {
-    background: #38251f;
-    color: #fffaf5;
-}
 .moment-wisdom .moment-content {
     max-width: 650px;
 }
 
 /* QUOTE THAT STAYS WITH YOU */
 .featured-quote-section {
-    padding:  7%;
-    /* background: linear-gradient(
-        135deg,
-        #f5e9df 0%,
-        #e6d2c8 45%,
-        #d5b9aa 100%
-    ); */
-    color: #38251f;
-    /* background-color: lightgrey; */
+     width: 100%;
+     height: 90vh;
+     background-color: #0235AD;
+     
 }
 .featured-quote-container {
     position: relative;
@@ -446,6 +359,8 @@ align-items: flex-start;
     border-radius: 28px;
     text-align: center;
     background-color: #89CFEF;
+    width: 85%;
+    margin-top: 20px;
 }
 .featured-label {
     position: absolute;
