@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator</title>
+    <title>Quotivaa - Quote Generator</title>
     <link rel="stylesheet" href="generator.css">
 </head>
+
 <body>
-      <header>
-        <div class="header-container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <img src="logo.png" alt="">
-                </div>
-                <nav>
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-                </nav>
-                <button class="button1">Login</button>
 
+    <main class="generator">
 
-            </div>
-
+        <div class="generator-brand">
+            <a href="index.html">
+                <img src="logo.png" alt="Quotivaa Logo">
+            </a>
         </div>
-    </header>
 
-
-    <section class="generator">
         <h1>Quote Generator</h1>
-        <p>Welcome to the Quote Generator!</p>
+
+        <p class="welcome-text">
+            Get a little inspiration whenever you need it.
+        </p>
+
         <div class="quote-hold">
             <p class="quotes" id="quote-text"></p>
             <p class="author" id="quote-author"></p>
         </div>
 
-        <button class="button" id="generate-btn">Generate Quote</button>
-    </section>
+        <button class="button" id="generate-btn">
+            Generate Quote
+        </button>
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </main>
+
     <script src="generator.js"></script>
-    
+
 </body>
 </html>
