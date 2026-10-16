@@ -1,8 +1,29 @@
+/* RESET */
+
+* {
 *{
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
+
+
+/* BODY */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8FAFC;
+    color: #1E1B4B;
+}
+
+
+/* GENERATOR */
+
+.generator {
+    width: 100%;
+    min-height: 100vh;
 body{
     width: 100%;
     min-height: 100vh;
@@ -14,8 +35,38 @@ header{
     width: 100%;
     /* background-color: #89CFEF; */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+
+/* LOGO */
+
+.generator-brand {
+    margin-bottom: 5px;
+}
+
+.generator-brand a {
+    display: block;
+}
+
+.generator-brand img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+
+/* HEADING */
+
+.generator h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1E1B4B;
+    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -97,6 +148,13 @@ a:hover{
 
 
 
+/* WELCOME TEXT */
+
+.welcome-text {
+    font-size: 16px;
+    color: #64748B;
+    text-align: center;
+    margin-bottom: 10px;
 
 .generator {
     background-color: #89CFEF;
@@ -125,36 +183,45 @@ a:hover{
 
 
 .quote-hold {
-    width: min(80%, 1000px);
-    min-height: 180px;
+    width: min(80%, 900px);
+    min-height: 200px;
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
     justify-content: center;
     align-items: center;
 
-    margin-top: 20px;
+    gap: 20px;
 
-    background-color: white;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
 
-    border-radius: 10px;
-    border: 1px solid black;
+    padding: 40px;
 
-    padding: 30px 40px;
+    box-shadow: 0 10px 30px rgba(2, 53, 173, 0.07);
 }
+
+
+/* QUOTE */
 
 .quotes {
     width: 100%;
     font-size: 22px;
     line-height: 1.6;
+    font-weight: 500;
+    color: #0235AD;
     color: #143d9f;
     text-align: center;
 }
 
+
+/* AUTHOR */
+
 .author {
     width: 100%;
+    font-size: 16px;
+    color: #64748B;
     font-size: 20px;
     color: black;
     text-align: right;
@@ -163,22 +230,112 @@ a:hover{
 
 
 .button {
-    height: 50px;
     width: 190px;
+    padding: 13px 20px;
 
     background-color: #0235AD;
-    font-size: 18px;
-    color: white;
+    color: #FFFFFF;
 
-    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+
     border: 1px solid transparent;
+    border-radius: 8px;
 
     cursor: pointer;
+
+    transition: 0.3s ease;
 }
 
 .button:hover {
-    background-color: white;
+    background-color: #1E1B4B;
+    transform: translateY(-2px);
+}
+
+
+/* BACK TO HOME */
+
+.back-home {
+    margin-top: 5px;
+
     color: #0235AD;
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.back-home:hover {
+    color: #1E1B4B;
+}
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .generator {
+        padding: 40px 20px;
+    }
+
+    .generator-brand img {
+        width: 130px;
+    }
+
+    .generator h1 {
+        font-size: 28px;
+    }
+
+    .quote-hold {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .quotes {
+        font-size: 20px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .generator {
+        padding: 30px 15px;
+    }
+
+    .generator-brand img {
+        width: 110px;
+    }
+
+    .generator h1 {
+        font-size: 25px;
+    }
+
+    .welcome-text {
+        font-size: 14px;
+    }
+
+    .quote-hold {
+        width: 100%;
+        min-height: 190px;
+        padding: 25px 20px;
+    }
+
+    .quotes {
+        font-size: 18px;
+    }
+
+    .author {
+        font-size: 14px;
+    }
+
+    .button {
+        width: 180px;
     border-color: #0235AD;
 }
 
