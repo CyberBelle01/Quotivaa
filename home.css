@@ -1,25 +1,14 @@
-/* =========================================
-   GENERAL
-========================================= */
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 body {
     width: 100%;
     height: auto;
     background-color: #F8FAFC;
     font-family: sans-serif;
 }
-
-
-/* =========================================
-   HEADER
-========================================= */
-
 header {
     height: 15vh;
     width: 100%;
@@ -31,7 +20,6 @@ header {
     left: 0;
     z-index: 1000;
 }
-
 .header-container {
     width: 88%;
     height: 53%;
@@ -43,7 +31,6 @@ header {
         rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
         rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
 .header-wrapper {
     height: 100%;
     width: 95%;
@@ -51,20 +38,17 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
 .logo {
     height: 200px;
     width: 200px;
     display: flex;
     justify-content: center;
 }
-
 .logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-
 nav {
     height: 60%;
     width: 45%;
@@ -72,7 +56,6 @@ nav {
     align-items: center;
     justify-content: space-around;
 }
-
 nav a {
     text-decoration: none;
     font-family: sans-serif;
@@ -81,39 +64,31 @@ nav a {
     cursor: pointer;
     transition: 0.3s ease;
 }
-
 nav a:hover {
     color: #1E1B4B;
 }
-
 .button1 {
     padding: 10px 20px;
     background-color: #1E1B4B;
     color: #FFFFFF;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
     border: 1px solid transparent;
     transition: 0.3s ease;
 }
-
 .button1:hover {
     color: #0235AD;
     border-color: #0235AD;
     background-color: #FFFFFF;
 }
-
 .hamburger {
     width: 30px;
     height: 30px;
     display: none;
 }
 
-
-/* =========================================
-   HERO SECTION
-========================================= */
-
+/* HERO */
 .hero {
     margin-top: 80px;
     width: 100%;
@@ -129,23 +104,21 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
 }
-
 .heroContainer {
     width: 85%;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-
 .herotext {
     width: 60%;
     max-width: 650px;
+    /* background-color: red; */
 }
-
 .hero-tagline {
     display: inline-block;
     font-family: sans-serif;
@@ -155,7 +128,6 @@ nav a:hover {
     margin-bottom: 20px;
     color: #89CFEF;
 }
-
 .herotext h1 {
     font-family: sans-serif;
     font-size: 65px;
@@ -164,13 +136,11 @@ nav a:hover {
     color: #FFFFFF;
     margin-bottom: 22px;
 }
-
 .herotext h1 span {
     display: block;
     color: #89CFEF;
     font-weight: 700;
 }
-
 .herotext p {
     font-family: sans-serif;
     font-size: 20px;
@@ -180,7 +150,6 @@ nav a:hover {
     max-width: 500px;
     margin-bottom: 30px;
 }
-
 .hero-button {
     display: inline-flex;
     align-items: center;
@@ -196,40 +165,30 @@ nav a:hover {
     border: 1px solid #0235AD;
     transition: 0.3s ease;
 }
-
 .hero-button:hover {
     background-color: #FFFFFF;
     color: #0235AD;
 }
-
 .hero-button span {
     font-size: 21px;
 }
-
-
-/* =========================================
-   HERO IMAGE / QUOTE
-========================================= */
-
 .heroImg {
-    height: 100%;
+    height: 400px;
     width: 35%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    /* background-color: chartreuse; */
 }
-
 .heroImg img {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    
 }
 
 
-/* =========================================
-   FIND YOUR MOMENT SECTION
-========================================= */
-
+/* MOMENT */
 .moments-section {
     color: #1E1B4B;
     min-height: 100vh;
@@ -237,16 +196,13 @@ nav a:hover {
     padding: 100px 0;
     background-color: #F8FAFC;
 }
-
 .moments-container {
     width: 85%;
     margin: 0 auto;
 }
-
 .moments-heading {
     margin-bottom: 50px;
 }
-
 .moments-label {
     display: inline-block;
     margin-bottom: 18px;
@@ -255,14 +211,12 @@ nav a:hover {
     font-weight: 700;
     letter-spacing: 2px;
 }
-
 .moments-heading h2 {
     font-size: 40px;
     line-height: 1.15;
     color: #1E1B4B;
     margin-bottom: 15px;
 }
-
 .moments-heading p {
     max-width: 520px;
     margin: 0;
@@ -270,7 +224,6 @@ nav a:hover {
     font-size: 15px;
     line-height: 1.8;
 }
-
 .moments-grid {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
@@ -279,7 +232,6 @@ nav a:hover {
     margin-top: 5px;
     width: 100%;
 }
-
 .moment-card {
     position: relative;
     display: flex;
@@ -287,30 +239,21 @@ nav a:hover {
     justify-content: space-between;
     padding: 28px;
     overflow: hidden;
-
     border: 1px solid #E2E8F0;
     border-radius: 10px;
-
     text-decoration: none;
     color: #1E1B4B;
-
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
-
 .moment-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 15px 35px rgba(2, 53, 173, 0.12);
 }
-
-
-/* Motivation */
-
 .moment-motivation {
     grid-column: 1;
     grid-row: 1 / 3;
-
     background:
         linear-gradient(
             rgba(2, 53, 173, 0.2),
@@ -321,17 +264,11 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: flex-start;
     height: 450px;
-
     color: #FFFFFF;
 }
-
-
-/* Self Love */
-
 .moment-selflove {
     grid-column: 2;
     grid-row: 1;
@@ -339,10 +276,6 @@ nav a:hover {
     height: 200px;
     border-top: 4px solid #89CFEF;
 }
-
-
-/* Growth */
-
 .moment-growth {
     grid-column: 2;
     grid-row: 2;
@@ -350,17 +283,12 @@ nav a:hover {
     height: 200px;
     border-top: 4px solid #0235AD;
 }
-
-
-/* Moment Text */
-
 .moment-number {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
     opacity: 0.65;
 }
-
 .moment-symbol {
     position: absolute;
     top: 20px;
@@ -369,11 +297,9 @@ nav a:hover {
     line-height: 1;
     opacity: 0.55;
 }
-
 .moment-content {
     max-width: 400px;
 }
-
 .moment-tag {
     display: block;
     margin-bottom: 10px;
@@ -382,13 +308,11 @@ nav a:hover {
     letter-spacing: 1.5px;
     opacity: 0.7;
 }
-
 .moment-content h3 {
     font-size: 30px;
     letter-spacing: -0.7px;
     margin-bottom: 10px;
 }
-
 .moment-content p {
     max-width: 350px;
     margin: 0;
@@ -396,22 +320,14 @@ nav a:hover {
     line-height: 1.8;
     opacity: 0.8;
 }
-
 .moment-wisdom .moment-content {
     max-width: 650px;
 }
-
-
-/* =========================================
-   FEATURED QUOTE
-========================================= */
-
 .featured-quote-section {
     width: 100%;
     padding: 70px 0;
     background-color: #1E1B4B;
 }
-
 .featured-quote-container {
     position: relative;
     display: flex;
@@ -420,41 +336,32 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
     border: 1px solid rgba(137, 207, 239, 0.5);
     border-radius: 28px;
-
     text-align: center;
-
     background: linear-gradient(
         135deg,
         #0235AD,
         #89CFEF
     );
-
     width: 85%;
 }
-
 .featured-label {
     position: absolute;
     top: 35px;
     left: 50%;
     transform: translateX(-50%);
-
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
-
     white-space: nowrap;
     color: #FFFFFF;
 }
-
 .featured-quote-content {
     position: relative;
     z-index: 2;
     max-width: 750px;
 }
-
 .featured-quote-content h2 {
     margin: 0 0 28px;
     font-size: 14px;
@@ -462,25 +369,20 @@ nav a:hover {
     letter-spacing: 0.5px;
     color: #FFFFFF;
 }
-
 .featured-quote-text {
     margin: 0 auto 25px;
-
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(30px, 4.5vw, 55px);
     line-height: 1.3;
     letter-spacing: -1px;
-
     color: #FFFFFF;
 }
-
 .featured-quote-author {
     display: block;
     font-size: 18px;
     font-weight: 600;
     color: #EAF5FF;
 }
-
 .featured-divider {
     display: block;
     width: 45px;
@@ -488,18 +390,15 @@ nav a:hover {
     margin: 28px auto;
     background: #89CFEF;
 }
-
 .featured-quote-caption {
     margin: 0;
     font-size: 13px;
     line-height: 1.8;
     color: #EAF5FF;
 }
-
 .floating-quote {
     position: absolute;
     z-index: 1;
-
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(100px, 15vw, 190px);
     line-height: 1;

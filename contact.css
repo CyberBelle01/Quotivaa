@@ -1,324 +1,172 @@
-/* =========================================
-   RESET
-========================================= */
-
 * {
-    box-sizing: border-box; /* Keeps sizing predictable */
-    margin: 0; /* Removes default margins */
-    padding: 0; /* Removes default padding */
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
-
-
-/* =========================================
-   BODY
-========================================= */
-
 body {
     width: 100%;
     min-height: 100vh;
-
     font-family: 'Poppins', sans-serif;
-
-    background-color: #F8FAFC; /* Main light background */
-
-    color: #1E1B4B; /* Main dark navy text */
+    background-color: #F8FAFC; 
+    color: #1E1B4B; 
 }
-
-
-/* =========================================
-   HEADER
-========================================= */
-
 header {
     height: 15vh;
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: fixed;
     top: 0;
     left: 0;
-
     z-index: 1000;
 }
-
-
 .header-container {
     width: 88%;
     height: 53%;
-
-    /* Quotivaa gradient */
     background: linear-gradient(
         135deg,
         #0235AD,
         #89CFEF
     );
-
     border-radius: 8px;
-
     display: flex;
     justify-content: center;
-
     box-shadow:
         rgba(50, 50, 93, 0.20) 0px 6px 12px -2px,
         rgba(0, 0, 0, 0.20) 0px 3px 7px -3px;
 }
-
-
 .header-wrapper {
     height: 100%;
     width: 95%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
-/* =========================================
-   LOGO
-========================================= */
-
 .logo {
     height: 100%;
     width: 180px;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 .logo img {
     width: 100%;
     height: auto;
-
     object-fit: contain;
 }
-
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
 nav {
     height: 60%;
     width: 45%;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-
-
 nav a {
     text-decoration: none;
-
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-
     color: white;
-
     cursor: pointer;
-
     transition: 0.3s ease;
 }
-
-
 nav a:hover {
     color: #1E1B4B;
 }
-
-
-/* =========================================
-   LOGIN BUTTON
-========================================= */
-
 .button1 {
     padding: 10px 22px;
-
     background-color: #1E1B4B;
-
     color: white;
-
     border-radius: 6px;
-
-    font-size: 16px;
-
+    font-size: 14px;
     cursor: pointer;
-
     border: 1px solid transparent;
-
     transition: 0.3s ease;
 }
-
-
 .button1:hover {
     color: #0235AD;
-
     background-color: white;
-
     border-color: #0235AD;
 }
-
-
-/* =========================================
-   HAMBURGER
-========================================= */
-
 .hamburger {
     width: 30px;
     height: 30px;
-
     display: none;
-
     cursor: pointer;
 }
 
-
-/* =========================================
-   TEAM SECTION
-========================================= */
-
+/* OURTEAM */
 .our-team {
-    max-width: 1200px;
-
+    width: 85%;
     margin: 0 auto;
-
     padding: 180px 6% 70px;
-
     text-align: center;
+    /* background-color: #0235AD; */
 }
-
-
-/* Small heading above title */
 .eyebrow {
     display: inline-block;
-
     color: #0235AD;
-
     font-size: 13px;
-
     font-weight: 700;
-
     letter-spacing: 2px;
-
     margin-bottom: 12px;
 }
-
-
-/* Main heading */
 .our-team h1 {
     font-size: 44px;
-
     color: #1E1B4B;
-
     margin-bottom: 15px;
 }
-
-
-/* Team introduction */
-.our-team > p {
+.our-team p {
     max-width: 650px;
-
     margin: 0 auto 50px;
-
     color: #64748B;
-
     font-size: 16px;
-
     line-height: 1.7;
 }
-
-
-/* =========================================
-   TEAM MEMBERS
-========================================= */
-
 .team-container {
     display: flex;
-
-    justify-content: center;
-
+    justify-content: space-around;
     gap: 30px;
+    width: 100%;
+    /* background-color: chartreuse; */
 }
-
-
 .team-group {
     flex: 1;
-
     background-color: white;
-
     padding: 30px 25px;
-
     border-radius: 16px;
-
     border: 1px solid #E2E8F0;
-
-    box-shadow:
-        0 10px 30px rgba(2, 53, 173, 0.07);
-
+    box-shadow: 0 10px 30px rgba(2, 53, 173, 0.07);
     transition: 0.3s ease;
 }
-
-
 .team-group:hover {
     transform: translateY(-6px);
-
-    box-shadow:
-        0 15px 35px rgba(2, 53, 173, 0.15);
+    box-shadow: 0 15px 35px rgba(2, 53, 173, 0.15);
 }
-
-
-/* Team picture container */
 .team-members {
-    width: 120px;
-    height: 120px;
-
+    width: 180px;
+    height: 180px;
     margin: 0 auto 20px;
-
     border-radius: 50%;
-
     overflow: hidden;
-
     border: 4px solid #89CFEF;
-
     background-color: #E6F4FF;
 }
-
-
-/* Team picture */
 .team-members img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
-
-
-/* Team member name */
 .team-group h3 {
-    font-size: 20px;
-
+    font-size: 22px;
     color: #1E1B4B;
-
     margin-bottom: 5px;
 }
-
-
-/* Job title */
 .team-group h5 {
-    font-size: 13px;
-
+    font-size: 15px;
     color: #0235AD;
-
     margin-bottom: 12px;
 }
-
-
-/* Team description */
 .team-group p {
     font-size: 14px;
 
@@ -326,647 +174,362 @@ nav a:hover {
 
     color: #64748B;
 }
-
-
-/* =========================================
-   CONTACT SECTION
-========================================= */
-
 .contact-section {
     max-width: 1200px;
-
     margin: 0 auto 80px;
-
     padding: 0 6%;
-
     display: grid;
-
     grid-template-columns: 1.3fr 0.7fr;
-
     gap: 35px;
 }
-
-
-/* =========================================
-   CONTACT FORM
-========================================= */
-
 .contact-form {
     background-color: white;
-
     padding: 40px;
-
     border-radius: 16px;
-
     border: 1px solid #E2E8F0;
-
-    box-shadow:
-        0 10px 30px rgba(2, 53, 173, 0.07);
+    box-shadow: 0 10px 30px rgba(2, 53, 173, 0.07);
 }
-
-
 .contact-form h2 {
     font-size: 30px;
-
     color: #1E1B4B;
-
     margin-bottom: 10px;
 }
-
-
 .contact-intro {
     color: #64748B;
-
     font-size: 14px;
-
     line-height: 1.6;
-
     margin-bottom: 30px;
 }
-
-
-/* =========================================
-   INPUT ROW
-========================================= */
-
 .input-row {
     display: flex;
-
     gap: 20px;
 }
-
-
-/* =========================================
-   INPUT GROUP
-========================================= */
-
 .input-group {
     width: 100%;
-
     margin-bottom: 20px;
 }
-
-
 .input-group label {
     display: block;
-
     font-size: 13px;
-
     font-weight: 600;
-
     color: #1E1B4B;
-
     margin-bottom: 7px;
 }
-
-
 .input-group input,
 .input-group textarea {
     width: 100%;
-
     padding: 13px 15px;
-
     border: 1px solid #DCE6F0;
-
     border-radius: 8px;
-
     background-color: #F8FAFC;
-
     color: #1E1B4B;
-
     font-family: inherit;
-
     font-size: 14px;
-
     outline: none;
-
     transition: 0.3s ease;
 }
-
-
-/* When user clicks input */
 .input-group input:focus,
 .input-group textarea:focus {
     border-color: #0235AD;
-
     background-color: white;
-
-    box-shadow:
-        0 0 0 3px rgba(2, 53, 173, 0.08);
+    box-shadow: 0 0 0 3px rgba(2, 53, 173, 0.08);
 }
-
-
 .input-group textarea {
     resize: vertical;
 }
-
-
-/* =========================================
-   SEND BUTTON
-========================================= */
-
 .send-button {
     width: 100%;
-
     padding: 13px;
-
     border: none;
-
     border-radius: 8px;
-
-    background: linear-gradient(
-        135deg,
-        #0235AD,
-        #89CFEF
-    );
-
+    background-color: #0235AD;
     color: white;
-
     font-family: inherit;
-
     font-size: 15px;
-
     font-weight: 600;
-
     cursor: pointer;
-
     transition: 0.3s ease;
 }
-
-
 .send-button:hover {
     background: #1E1B4B;
-
-    transform: translateY(-2px);
+    
 }
-
-
-/* =========================================
-   CONTACT INFORMATION
-========================================= */
-
 .contact-information {
     background: linear-gradient(
         145deg,
         #1E1B4B,
         #0235AD
     );
-
     padding: 40px;
-
     border-radius: 16px;
-
     color: white;
-
-    box-shadow:
-        0 10px 30px rgba(2, 53, 173, 0.15);
+    box-shadow: 0 10px 30px rgba(2, 53, 173, 0.15);
 }
-
-
 .contact-information h3 {
     font-size: 25px;
-
     margin-bottom: 35px;
-
     color: white;
 }
-
-
-/* Individual information */
 .information-item {
     display: flex;
-
     align-items: center;
-
     gap: 15px;
-
     margin-bottom: 30px;
 }
-
-
-/* Icon box */
 .information-icon {
     width: 45px;
     height: 45px;
-
     flex-shrink: 0;
-
     border-radius: 10px;
-
     background-color: rgba(137, 207, 239, 0.18);
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 }
-
-
-/* Information icon */
 .information-icon img {
     width: 22px;
     height: 22px;
 }
-
-
-/* Information text */
 .information-text h4 {
     font-size: 14px;
-
     color: #89CFEF;
-
     margin-bottom: 4px;
 }
-
-
 .information-text p {
     font-size: 14px;
-
     color: #F8FAFC;
 }
-
-
-/* =========================================
-   CONTACT SOCIALS
-========================================= */
-
 .contact-socials {
     display: flex;
-
     gap: 10px;
-
     margin-top: 7px;
 }
-
-
 .contact-socials a {
     width: 34px;
     height: 34px;
-
     background-color: white;
-
     border-radius: 50%;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     transition: 0.3s ease;
 }
-
-
 .contact-socials img {
     width: 17px;
     height: 17px;
 }
-
-
 .contact-socials a:hover {
     background-color: #89CFEF;
-
     transform: translateY(-3px);
 }
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
 .footer {
     width: 100%;
     background-color: #1E1B4B;
     color: #FFFFFF;
     padding: 45px 0 0;
 }
-
 .footer-container {
     width: 90%;
-
     max-width: 1310px;
-
     margin: 0 auto;
-
     padding-bottom: 30px;
-
     display: grid;
-
     grid-template-columns: 2fr 1fr 1fr;
-
     gap: 35px;
-
     align-items: start;
 }
-
-
 .footer-brand img {
     width: 150px;
-
     height: auto;
-
     object-fit: contain;
-
     display: block;
 }
-
-
 .footer-brand p {
     max-width: 350px;
-
     font-family: 'Poppins', sans-serif;
-
     font-size: 16px;
-
     line-height: 1.7;
-
     color: #D9EFFF;
-
     margin-top: 15px;
 }
-
-
 .footer-links h3,
 .footer-socials h3 {
     font-family: 'Poppins', sans-serif;
-
     font-size: 16px;
-
     margin-bottom: 20px;
-
     color: #89CFEF;
 }
-
-
 .footer-links {
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
 }
-
-
 .footer-links a {
     font-family: 'Poppins', sans-serif;
-
     font-size: 16px;
-
     color: white;
-
     text-decoration: none;
-
     margin-bottom: 12px;
-
     transition: 0.3s;
 }
-
-
 .footer-links a:hover {
     color: #89CFEF;
-
     padding-left: 5px;
 }
-
-
-/* =========================================
-   FOOTER SOCIAL ICONS
-========================================= */
-
 .social-icons {
     display: flex;
-
     align-items: center;
-
     gap: 15px;
 }
-
-
 .social-icons a {
     width: 38px;
     height: 38px;
-
     background-color: white;
-
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     transition: 0.3s;
 }
-
-
 .social-icons img {
     width: 18px;
     height: 18px;
-
     object-fit: contain;
 }
-
-
 .social-icons a:hover {
     background-color: #89CFEF;
-
     transform: translateY(-3px);
 }
-
-
-/* =========================================
-   FOOTER BOTTOM
-========================================= */
-
 .footer-bottom {
     width: 90%;
-
     max-width: 1310px;
-
     margin: 0 auto;
-
     border-top: 1px solid rgba(255, 255, 255, 0.15);
-
     padding: 20px 0;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 15px;
 }
-
-
 .footer-bottom p {
     font-family: 'Poppins', sans-serif;
-
     font-size: 14px;
-
     color: #D9EFFF;
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/* RESPONSIVENESS */
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1044px) {
 
     header {
         height: 130px;
     }
-
-    nav,
-    header > a {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
     .logo {
         width: 140px;
     }
-
-
     .our-team {
         padding-top: 160px;
     }
-
-
     .team-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
+        width: 100%;
     }
-
-
+    .team-group {
+        min-width: 0;
+        padding: 25px 15px;
+    }
+    .team-members {
+        width: 140px;
+        height: 140px;
+        max-width: 100%;
+        margin: 0 auto 20px;
+        overflow: hidden;
+    }
+    .team-members img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     .contact-section {
         grid-template-columns: 1fr;
     }
-
-
     .contact-information {
         display: grid;
-
         grid-template-columns: 1fr 1fr;
-
         gap: 20px;
     }
-
-
     .contact-information h3 {
         grid-column: span 2;
     }
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* MOBILE   RESPONSIVENESS */
 
 @media (max-width: 767px) {
 
     header {
         height: 100px;
     }
-
-
     .header-container {
         width: 92%;
         height: 65%;
     }
-
-
     nav,
     header > a {
         display: none;
     }
-
-
     .hamburger {
         display: block;
     }
-
-
+    .button1{
+        display: none;
+    }
     .logo {
         width: 110px;
     }
-
-
-    /* Team becomes one column */
     .our-team {
         padding: 140px 6% 50px;
     }
-
-
     .our-team h1 {
         font-size: 34px;
     }
-
-
-    .our-team > p {
+    .our-team p {
         font-size: 14px;
     }
-
-
     .team-container {
         flex-direction: column;
-
-        gap: 20px;
+       gap: 20px;
     }
-
-
-    /* Contact section */
     .contact-section {
         padding: 0 6%;
-
         grid-template-columns: 1fr;
-
         gap: 20px;
     }
-
-
     .contact-form {
         padding: 25px;
     }
-
-
     .contact-form h2 {
         font-size: 25px;
     }
-
-
     .input-row {
         flex-direction: column;
-
         gap: 0;
     }
-
-
     .contact-information {
         display: block;
-
         padding: 30px;
     }
-
-
-    /* Footer */
     .footer-container {
         grid-template-columns: 1fr;
-
         gap: 30px;
     }
-
-
     .footer-bottom {
         flex-direction: column;
-
         text-align: center;
-
         align-items: center;
     }
 }
