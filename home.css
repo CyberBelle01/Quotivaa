@@ -400,36 +400,26 @@ nav a:hover {
     position: absolute;
     z-index: 1;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(100px, 15vw, 190px);
     line-height: 1;
-
     color: rgba(255, 255, 255, 0.15);
-
-    user-select: none;
-    pointer-events: none;
-
     animation: quoteFloat 5s ease-in-out infinite;
 }
-
 .quote-top {
     top: 30px;
     left: 8%;
 }
-
 .quote-left {
     top: 42%;
     left: 2%;
     font-size: 110px;
     animation-delay: 1s;
 }
-
 .quote-right {
     right: 4%;
     bottom: 12%;
     font-size: 150px;
     animation-delay: 2s;
 }
-
 .quote-bottom {
     right: 15%;
     top: 5%;
@@ -437,22 +427,7 @@ nav a:hover {
     animation-delay: 1.5s;
 }
 
-@keyframes quoteFloat {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-
-/* =========================================
-   LETTER SECTION
-========================================= */
-
+/* LETTERSECTION */
 .letter-section {
     padding: 100px 8%;
     background: #F8FAFC;
@@ -461,18 +436,14 @@ nav a:hover {
 .letter-container {
     max-width: 1200px;
     margin: 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 70px;
 }
-
 .letter-intro {
     flex: 1;
 }
-
 .letter-label {
     display: inline-block;
     color: #0235AD;
@@ -481,78 +452,35 @@ nav a:hover {
     letter-spacing: 2px;
     margin-bottom: 22px;
 }
-
 .letter-intro h2 {
     font-size: clamp(42px, 5vw, 65px);
     line-height: 1.1;
     color: #1E1B4B;
     margin-bottom: 20px;
 }
-
 .letter-intro p {
     font-size: 17px;
     line-height: 1.8;
     color: #64748B;
     max-width: 350px;
 }
-
 .letter-heart {
     display: inline-block;
     margin-top: 25px;
     font-size: 35px;
     color: #89CFEF;
 }
-
 .letter-card {
     flex: 1;
     max-width: 520px;
-
     padding: 55px 45px;
-
     background: #FFFFFF;
-
-    border: 1px solid #E2E8F0;
+    border: 2px solid #89CFEF;
     border-radius: 8px;
-
     box-shadow: 0 15px 35px rgba(18, 59, 102, 0.10);
-
     position: relative;
     margin: 15px 0;
 }
-
-
-/* Rolled Edges */
-
-.letter-card::before,
-.letter-card::after {
-    content: "";
-
-    position: absolute;
-    left: -10px;
-
-    width: calc(100% + 20px);
-    height: 22px;
-
-    background: linear-gradient(
-        to bottom,
-        #89CFEF,
-        #FFFFFF 40%,
-        #EAF5FF
-    );
-
-    border-radius: 50%;
-
-    box-shadow: 0 3px 5px rgba(18, 59, 102, 0.12);
-}
-
-.letter-card::before {
-    top: -10px;
-}
-
-.letter-card::after {
-    bottom: -10px;
-}
-
 .letter-decoration {
     position: absolute;
     top: 20px;
@@ -596,42 +524,28 @@ nav a:hover {
     font-size: 24px;
 }
 
-
-/* =========================================
-   INSPIRE SECTION
-========================================= */
-
 .inspire-section {
     padding: 100px 7%;
     background: #F8FAFC;
     color: #1E1B4B;
 }
-
 .inspire-container {
     position: relative;
-
     display: flex;
-
     min-height: 420px;
     max-width: 1250px;
-
     margin: 0 auto;
     padding: 75px 30px;
-
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
-
     border-radius: 28px;
-
     background: linear-gradient(
         135deg,
         #EAF5FF,
         #FFFFFF 55%,
         #DCEEFF
     );
-
     text-align: center;
 }
 
@@ -640,285 +554,200 @@ nav a:hover {
     z-index: 2;
     max-width: 700px;
 }
-
 .inspire-label {
     position: absolute;
     top: 35px;
     left: 50%;
-
     transform: translateX(-50%);
-
     color: #0235AD;
-
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
-
     white-space: nowrap;
 }
-
 .inspire-content h2 {
     margin: 0 0 22px;
-
     font-size: clamp(36px, 5vw, 58px);
     line-height: 1.15;
     letter-spacing: -1.8px;
-
     color: #1E1B4B;
 }
 
 .inspire-content p {
     max-width: 530px;
     margin: 0 auto 30px;
-
     color: #64748B;
-
     font-size: 14px;
     line-height: 1.9;
 }
-
 .inspire-button {
     display: inline-flex;
-
     min-height: 52px;
     padding: 0 25px;
-
     align-items: center;
     justify-content: center;
     gap: 22px;
-
     border: 1px solid #0235AD;
     border-radius: 6px;
-
     background: #0235AD;
     color: #FFFFFF;
-
     font-size: 13px;
     font-weight: 600;
-
     text-decoration: none;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
+    transition: background 0.3s ease,  color 0.3s ease, transform 0.3s ease;
 }
-
 .inspire-button:hover {
     transform: translateY(-3px);
     background: #FFFFFF;
     color: #0235AD;
 }
-
 .inspire-button span {
     font-size: 20px;
     transition: transform 0.3s ease;
 }
-
 .inspire-button:hover span {
     transform: translateX(4px);
 }
-
 .inspire-note {
     display: block;
-
     margin-top: 20px;
-
     color: #64748B;
     font-size: 11px;
 }
-
 .inspire-decoration {
     position: absolute;
-
     top: 20px;
     right: 8%;
-
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(140px, 20vw, 250px);
     line-height: 1;
-
     color: rgba(2, 53, 173, 0.08);
-
     pointer-events: none;
 }
 
-
-/* =========================================
-   QUOTIVAA BRAND SECTION
-========================================= */
-
+/* QUOTIVAAA */
 .brand-section {
     padding: 45px 3% 20px;
     overflow: hidden;
     background: #FFFFFF;
 }
-
 .brand-container {
     max-width: 1500px;
     margin: 0 auto;
 }
-
 .brand-tagline {
     margin: 0 0 15px;
-
     text-align: center;
-
     color: #0235AD;
-
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
 }
-
 .brand-wordmark {
     width: 100%;
     overflow: hidden;
     text-align: center;
 }
-
 .brand-wordmark span {
     display: block;
-
     font-size: 200px;
     font-weight: 900;
     line-height: 0.95;
-
     color: #1E1B4B;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
-
+/* FOOTER */
 .footer {
     width: 100%;
-
     background-color: #1E1B4B;
     color: #FFFFFF;
-
     margin-top: 20px;
     padding: 25px 0 0;
 }
-
 .footer-container {
     width: 90%;
     max-width: 1310px;
-
     margin: 0 auto;
     padding-bottom: 20px;
-
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-
     gap: 35px;
     align-items: start;
 }
-
 .footer-brand img {
     width: 150px;
     height: 100px;
-
     object-fit: contain;
     display: block;
 }
-
 .footer-brand p {
     max-width: 350px;
-
     font-family: sans-serif;
     font-size: 20px;
     line-height: 1.8;
-
     color: #CBD5E1;
-
     margin-top: 15px;
 }
-
 .footer-links h3,
 .footer-socials h3 {
     font-family: sans-serif;
     font-size: 17px;
-
     margin-bottom: 20px;
-
     color: #89CFEF;
 }
-
 .footer-links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
 .footer-links a {
     font-family: sans-serif;
     font-size: 18px;
-
     color: #FFFFFF;
-
     text-decoration: none;
-
     margin-bottom: 12px;
-
     transition: 0.3s;
 }
-
 .footer-links a:hover {
     color: #89CFEF;
     padding-left: 5px;
 }
-
 .social-icons {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 .social-icons a {
     width: 35px;
     height: 35px;
-
     background-color: #FFFFFF;
-
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: 0.3s;
 }
-
 .social-icons img {
     width: 18px;
     height: 18px;
     object-fit: contain;
 }
-
 .social-icons a:hover {
     background-color: #89CFEF;
     transform: translateY(-3px);
 }
-
 .footer-bottom {
     width: 90%;
     max-width: 1310px;
-
     margin: 0 auto;
-
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-
     padding: 20px 0;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     gap: 15px;
 }
-
 .footer-bottom p {
     font-family: sans-serif;
     font-size: 16px;
@@ -926,529 +755,396 @@ nav a:hover {
 }
 
 
-/* =========================================
-   MOBILE RESPONSIVENESS
-   MAX-WIDTH: 767px
-========================================= */
-
+/* RESPONSIVENESS */
 @media (max-width: 767px) {
-
-    /* HEADER */
 
     header {
         height: 85px;
         padding: 0;
     }
-
     .header-container {
         width: 92%;
         height: 65px;
         border-radius: 8px;
     }
-
     .header-wrapper {
         width: 92%;
     }
-
     .logo {
         width: 120px;
         height: 120px;
     }
-
     .logo img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
-
     nav {
         display: none;
     }
-
     .button1 {
         display: none;
     }
-
     .hamburger {
         display: block;
         width: 27px;
         height: 27px;
         cursor: pointer;
     }
-
-
     /* HERO */
-
     .hero {
         margin-top: 85px;
-
         min-height: auto;
         height: auto;
-
         padding: 60px 0;
-
         background-position: center;
         background-size: cover;
     }
-
     .heroContainer {
         width: 88%;
-
         flex-direction: column;
         align-items: stretch;
-
         gap: 45px;
-
         margin: 0 auto;
     }
-
     .herotext {
         width: 100%;
         max-width: 100%;
     }
-
     .hero-tagline {
         font-size: 11px;
         letter-spacing: 2px;
         margin-bottom: 15px;
     }
-
     .herotext h1 {
         font-size: clamp(34px, 8vw, 44px);
         line-height: 1.2;
         margin-bottom: 18px;
     }
-
     .herotext h1 span {
         display: block;
     }
-
     .herotext p {
         font-size: 15px;
         line-height: 1.8;
-
         max-width: 100%;
         margin-bottom: 25px;
     }
-
     .hero-button {
         padding: 14px 20px;
         font-size: 14px;
         gap: 12px;
     }
-
     .heroImg {
         width: 100%;
         padding-right: 0;
         justify-content: center;
     }
-
-
     /* MOMENTS */
-
     .moments-section {
         padding: 60px 0;
     }
-
     .moments-container {
         width: 88%;
         max-width: 100%;
         margin: 0 auto;
     }
-
     .moments-heading {
         max-width: 100%;
         margin-bottom: 30px;
     }
-
     .moments-label {
         font-size: 10px;
         letter-spacing: 1.5px;
         margin-bottom: 12px;
     }
-
     .moments-heading h2 {
         font-size: clamp(30px, 7vw, 38px);
         line-height: 1.2;
         letter-spacing: -0.8px;
         margin-bottom: 15px;
     }
-
     .moments-heading p {
         max-width: 100%;
         font-size: 14px;
         line-height: 1.8;
     }
-
     .moments-grid {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto;
         gap: 18px;
     }
-
     .moment-motivation,
     .moment-selflove,
     .moment-growth,
     .moment-wisdom {
         grid-column: auto;
         grid-row: auto;
-
         min-height: 220px;
         height: auto;
     }
-
     .moment-card {
         padding: 25px;
         border-radius: 16px;
     }
-
     .moment-number {
         font-size: 10px;
     }
-
     .moment-symbol {
         top: 18px;
         right: 20px;
         font-size: 38px;
     }
-
     .moment-content {
         max-width: 100%;
         padding-right: 5px;
     }
-
     .moment-content h3 {
         font-size: 25px;
         line-height: 1.3;
         letter-spacing: -0.5px;
         margin-bottom: 10px;
     }
-
     .moment-content p {
         max-width: 100%;
         font-size: 14px;
         line-height: 1.7;
         padding-right: 5px;
     }
-
     .moment-arrow {
         width: 34px;
         height: 34px;
-
         right: 18px;
         bottom: 18px;
-
         font-size: 17px;
     }
-
     .moment-wisdom .moment-content {
         max-width: 100%;
     }
-
-
     /* FEATURED QUOTE */
-
     .featured-quote-section {
         padding: 60px 6%;
     }
-
     .featured-quote-container {
         width: 100%;
-
-        padding: 85px 22px 45px;
-
+       padding: 85px 22px 45px;
         border-radius: 20px;
     }
-
     .featured-label {
         top: 25px;
         font-size: 9px;
         letter-spacing: 1.5px;
-
         max-width: 90%;
         text-align: center;
     }
-
     .featured-quote-content {
         width: 100%;
         max-width: 100%;
     }
-
     .featured-quote-content h2 {
         font-size: 13px;
         line-height: 1.6;
         margin-bottom: 22px;
     }
-
     .featured-quote-text {
         font-size: clamp(27px, 7vw, 38px);
         line-height: 1.35;
         letter-spacing: -0.5px;
         margin-bottom: 22px;
     }
-
     .featured-quote-author {
         font-size: 15px;
         line-height: 1.6;
     }
-
     .featured-divider {
         margin: 22px auto;
     }
-
     .featured-quote-caption {
         font-size: 12px;
         line-height: 1.8;
     }
-
-
     /* LETTER */
-
     .letter-section {
         padding: 60px 0;
     }
-
     .letter-container {
         width: 88%;
         max-width: 100%;
-
         margin: 0 auto;
-
         flex-direction: column;
         align-items: stretch;
-
         gap: 35px;
     }
-
     .letter-intro {
         width: 100%;
         flex: none;
     }
-
     .letter-label {
         font-size: 11px;
         letter-spacing: 1.5px;
         margin-bottom: 15px;
     }
-
     .letter-intro h2 {
         font-size: clamp(36px, 9vw, 48px);
         line-height: 1.15;
         margin-bottom: 15px;
     }
-
     .letter-intro p {
         max-width: 100%;
         font-size: 15px;
         line-height: 1.8;
     }
-
     .letter-heart {
         margin-top: 18px;
         font-size: 30px;
     }
-
     .letter-card {
         width: 100%;
         max-width: 100%;
-
         flex: none;
-
         padding: 40px 25px;
-
         margin: 15px 0;
-
         box-sizing: border-box;
     }
-
     .letter-decoration {
         top: 15px;
         right: 18px;
         font-size: 20px;
     }
-
     .letter-greeting {
         font-size: 21px;
         line-height: 1.4;
         margin-bottom: 22px;
     }
-
-
     /* INSPIRE */
-
     .inspire-section {
         padding: 60px 6%;
     }
-
     .inspire-container {
         width: 100%;
-
         min-height: 350px;
-
         padding: 75px 22px 45px;
-
         border-radius: 20px;
     }
-
     .inspire-content {
         width: 100%;
         max-width: 100%;
     }
-
     .inspire-label {
         top: 25px;
         font-size: 9px;
         letter-spacing: 1.5px;
-
         max-width: 90%;
         text-align: center;
     }
-
     .inspire-content h2 {
         font-size: clamp(30px, 7.5vw, 40px);
         line-height: 1.2;
         letter-spacing: -0.8px;
         margin-bottom: 18px;
     }
-
     .inspire-content p {
         max-width: 100%;
         font-size: 13px;
         line-height: 1.8;
         margin-bottom: 25px;
     }
-
     .inspire-button {
         min-height: 48px;
         padding: 0 20px;
-
         gap: 15px;
-
         font-size: 12px;
     }
-
     .inspire-button span {
         font-size: 18px;
     }
-
     .inspire-note {
         margin-top: 16px;
         font-size: 10px;
         line-height: 1.6;
     }
-
     .inspire-decoration {
         top: 25px;
         right: 3%;
-
         font-size: 110px;
         opacity: 0.8;
     }
-
-
     /* QUOTIVAA */
-
     .brand-section {
         padding: 35px 3% 15px;
     }
-
     .brand-container {
         width: 100%;
     }
-
     .brand-tagline {
         font-size: 9px;
         letter-spacing: 1.5px;
         line-height: 1.6;
         margin-bottom: 12px;
     }
-
     .brand-wordmark {
         width: 100%;
         overflow: hidden;
     }
-
     .brand-wordmark span {
         font-size: clamp(42px, 12.5vw, 90px);
         line-height: 1;
         letter-spacing: -2px;
         white-space: nowrap;
     }
-
-
     /* FOOTER */
-
     .footer {
         margin-top: 15px;
         padding: 20px 0 0;
     }
-
     .footer-container {
         width: 88%;
-
         grid-template-columns: 1fr;
-
         gap: 30px;
-
         padding-bottom: 25px;
     }
-
     .footer-brand img {
         width: 125px;
         height: 100px;
         object-fit: contain;
     }
-
     .footer-brand p {
         max-width: 100%;
-
         font-size: 14px;
         line-height: 1.8;
-
         margin-top: 8px;
     }
-
     .footer-links h3,
     .footer-socials h3 {
         font-size: 16px;
         margin-bottom: 15px;
     }
-
     .footer-links {
         align-items: flex-start;
     }
-
     .footer-links a {
         font-size: 15px;
         margin-bottom: 10px;
     }
-
     .social-icons {
         flex-wrap: wrap;
         gap: 12px;
     }
-
     .social-icons a {
         width: 34px;
         height: 34px;
     }
-
     .social-icons img {
         width: 17px;
         height: 17px;
     }
-
     .footer-bottom {
         width: 88%;
-
         padding: 18px 0;
-
         flex-direction: column;
         align-items: flex-start;
-
         gap: 10px;
     }
-
     .footer-bottom p {
         font-size: 13px;
         line-height: 1.7;
@@ -1456,10 +1152,7 @@ nav a:hover {
 }
 
 
-/* =========================================
-   TABLET RESPONSIVENESS
-   768px - 1044px
-========================================= */
+
 
 @media (min-width: 768px) and (max-width: 1044px) {
 
@@ -1608,20 +1301,15 @@ nav a:hover {
         letter-spacing: -3px;
         white-space: nowrap;
     }
-
-
     /* FOOTER */
-
     .footer-container {
         width: 90%;
         grid-template-columns: 1fr 1fr;
         gap: 40px 20px;
     }
-
     .footer-brand {
         grid-column: span 2;
     }
-
     .footer-brand p {
         max-width: 100%;
     }
