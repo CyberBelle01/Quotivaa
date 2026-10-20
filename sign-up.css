@@ -1,27 +1,33 @@
-
 body {
-    background-color: #f4f6f8;
+    background-color: #F8FAFC;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .signup-container {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 40px 35px;
     border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 24px rgba(30, 27, 75, 0.08);
     width: 100%;
-    max-width: 460px; 
+    max-width: 460px;
     box-sizing: border-box;
 }
 
 .signup-header {
     text-align: center;
     margin-bottom: 16px;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .signup-header .logo img {
@@ -32,10 +38,9 @@ body {
 .signup-header .title {
     font-size: 22px;
     font-weight: 700;
-    color: #1a253c;
+    color: #1E1B4B;
     margin: 0;
 }
-
 
 .input-group {
     margin-bottom: 12px;
@@ -45,7 +50,7 @@ body {
     display: block;
     font-weight: 700;
     font-size: 14px;
-    color: #0235AD;
+    color: #1E1B4B;
     margin-bottom: 4px;
 }
 
@@ -55,8 +60,8 @@ body {
     font-size: 15px;
     border: 1px solid #89CFEF;
     border-radius: 6px;
-    background-color: #ffffff;
-    color: #1f2937;
+    background-color: #FFFFFF;
+    color: #1E1B4B;
     outline: none;
     box-sizing: border-box;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -64,9 +69,8 @@ body {
 
 .input-group input:focus {
     border-color: #0235AD;
-    box-shadow: 0 0 0 3px rgba(15, 138, 95, 0.1);
+    box-shadow: 0 0 0 3px rgba(2, 53, 173, 0.1);
 }
-
 
 .password-wrapper {
     position: relative;
@@ -75,20 +79,7 @@ body {
 }
 
 .password-wrapper input {
-    padding-right: 42px; 
-}
-
-.toggle-password {
-    position: absolute;
-    right: 14px;
-    color: #9ca3af;
-    cursor: pointer;
-    font-size: 16px;
-    transition: color 0.2s;
-}
-
-.toggle-password:hover {
-    color: #4b5563;
+    padding-right: 42px;
 }
 
 .btn-signup {
@@ -96,8 +87,8 @@ body {
     text-align: center;
     text-decoration: none;
     width: 100%;
-    background-color: #89CFEF; 
-    color: white;
+    background-color: #0235AD;
+    color: #FFFFFF;
     border: none;
     padding: 12px;
     font-size: 14px;
@@ -108,13 +99,14 @@ body {
 }
 
 .btn-signup:hover {
-    background-color: #0235AD;
+    background-color: #1E1B4B;
 }
+
 
 .footer-text {
     text-align: center;
     font-size: 14px;
-    color: #4b5563;
+    color: #64748B;
     margin-top: 24px;
     margin-bottom: 0;
 }
@@ -126,51 +118,54 @@ body {
 }
 
 .footer-text a:hover {
+    color: #1E1B4B;
     text-decoration: underline;
 }
 
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
+
     .signup-container {
-        max-width: 400px; 
-        padding: 24px 28px; 
+        max-width: 400px;
+        padding: 24px 28px;
     }
-    
+
     .signup-header .title {
-        font-size: 20px; 
+        font-size: 20px;
     }
 }
 
 
-@media(max-width: 480px) {
+@media (max-width: 480px) {
+
     body {
-        background-color: #ffffff;
-        align-items: flex-start; 
+        background-color: #FFFFFF;
+        align-items: flex-start;
         padding-top: 20px;
     }
 
     .signup-container {
-        max-width: 100%; 
-        box-shadow: none; 
-        padding: 16px 20px; 
+        max-width: 100%;
+        box-shadow: none;
+        padding: 16px 20px;
     }
 
     .signup-header .logo img {
-        height: 48px; 
+        height: 48px;
         margin-bottom: 4px;
     }
 
     .signup-header {
-        margin-bottom: 12px; 
+        margin-bottom: 12px;
     }
 
     .input-group input {
-        padding: 11px 12px; 
-        font-size: 14px; 
+        padding: 11px 12px;
+        font-size: 14px;
     }
 
     .btn-signup {
-        padding: 12px; 
+        padding: 12px;
         font-size: 15px;
         margin-top: 20px;
     }
