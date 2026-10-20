@@ -1,7 +1,6 @@
 /* RESET */
 
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -24,12 +23,6 @@ body {
 .generator {
     width: 100%;
     min-height: 100vh;
-}
-
-header{
-    height: 160px;
-    width: 100%;
-    /* background-color: #89CFEF; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,85 +56,7 @@ header{
     font-weight: 700;
     color: #1E1B4B;
     text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
-.header-container{
-    width: 88%;
-    height: 53%;
-    background-color: white;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
-}
-.header-wrapper{
-    
-    height: 100%;
-    width: 95%;
-    /* background-color: purple; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo{
-    height: 200px;
-    width: 200px;
-    /* background-color: gray; */
-    display: flex;
-    justify-content: center;
-    & img{
-        width: 100%;
-        height: 100%;
-        
-    }
-}
-nav{
-    height: 60%;
-    width: 45%;
-    /* background-color: chartreuse; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    & a{
-        text-decoration: none;
-        font-family: sans-serif;
-        font-size: 19px;
-        color: #061D55;
-        cursor: pointer;
-    }
-}
-a:hover{
-    color: #0235AD;
-}
-.button1{
-    padding: 13px 40px 13px 40px;
-    background-color: #0235AD;
-    color: white;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    border: 1px solid transparent;
-}
-
-.button1:hover{
-    color: #0235AD;
-    border-color: #0235AD;
-    border-radius: 40px;
-    background-color: white;
-    transition-duration: 0.5s;
-}
-.hamburger{
-    width: 30px;
-    height: 30px;
-    display: none;
-    color: #059669;
-}
-
 
 
 /* WELCOME TEXT */
@@ -152,31 +67,9 @@ a:hover{
     text-align: center;
     margin-bottom: 10px;
 }
-.generator {
-    background-color: #89CFEF;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.generator h1 {
-    font-size: 45px;
-    font-weight: 900;
-    color: #0235AD;
-}
-
-.generator > p {
-    font-size: 20px;
-    color: black;
-}
 
 
+/* QUOTE BOX */
 
 .quote-hold {
     width: min(80%, 900px);
@@ -207,7 +100,6 @@ a:hover{
     line-height: 1.6;
     font-weight: 500;
     color: #0235AD;
-    color: #143d9f;
     text-align: center;
 }
 
@@ -218,12 +110,11 @@ a:hover{
     width: 100%;
     font-size: 16px;
     color: #64748B;
-    font-size: 20px;
-    color: black;
     text-align: right;
 }
 
 
+/* GENERATE BUTTON */
 
 .button {
     width: 190px;
@@ -332,80 +223,5 @@ a:hover{
 
     .button {
         width: 180px;
-    border-color: #0235AD;
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 767px) {
-
-
-    header {
-        height: 85px;
-        padding: 0;
-        
-    }
-    .header-container {
-        width: 92%;
-        height: 65px;
-        border-radius: 8px;
-    }
-    .header-wrapper {
-        width: 92%;
-    }
-    .logo {
-        width: 120px;
-        height: 120px;
-    }
-    .logo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-    nav {
-        display: none;
-    }
-    .button1 {
-        display: none;
-    }
-    .hamburger {
-        display: block;
-        width: 27px;
-        height: 27px;
-        cursor: pointer;
     }
 }
