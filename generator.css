@@ -3,19 +3,102 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     width: 100%;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #F8FAFC, #EAF1FF);
     background:
-    linear-gradient(
-        rgba(248, 250, 252, 0.55),
-        rgba(234, 241, 255, 0.62)
-    ),
-    url("image3.png") center / cover no-repeat;
+        linear-gradient(
+            rgba(248, 250, 252, 0.55),
+            rgba(234, 241, 255, 0.62)
+        ),
+        url("image3.png") center / cover no-repeat;
+}
 
+header {
+    height: 160px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
+.header-container {
+    width: 88%;
+    height: 53%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.header-wrapper {
+    height: 100%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    height: 60%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 19px;
+    color: #061D55;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #0235AD;
+}
+
+.button1 {
+    padding: 13px 40px;
+    background-color: #0235AD;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.button1:hover {
+    color: #0235AD;
+    border-color: #0235AD;
+    border-radius: 40px;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+
+.hamburger {
+    width: 30px;
+    height: 30px;
+    display: none;
+    color: #059669;
 }
 
 .generator {
@@ -25,26 +108,28 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 18px;
+    gap: 10px;
     padding: 40px 20px;
     position: relative;
     overflow: hidden;
 }
+
 .generator-brand {
     margin-bottom: 5px;
     position: relative;
     z-index: 1;
     height: 110px;
-    /* background-color: red; */
 }
+
 .generator-brand a {
     display: block;
 }
+
 .generator-brand img {
     width: 200px;
     height: auto;
-    
 }
+
 .generator h1 {
     font-size: 32px;
     font-weight: 700;
@@ -54,15 +139,17 @@ body {
     position: relative;
     z-index: 1;
 }
+
 .welcome-text {
     font-size: 15px;
-    color:  gray;
+    color: black;
     text-align: center;
     margin-bottom: 12px;
     line-height: 1.7;
     position: relative;
     z-index: 1;
 }
+
 .quote-hold {
     width: min(90%, 650px);
     min-height: 300px;
@@ -80,6 +167,7 @@ body {
     overflow: hidden;
     z-index: 1;
 }
+
 .quote-hold::before {
     content: "“";
     position: absolute;
@@ -91,6 +179,7 @@ body {
     color: rgba(147, 197, 253, 0.12);
     pointer-events: none;
 }
+
 .quotes {
     width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -103,6 +192,7 @@ body {
     z-index: 1;
     overflow-wrap: break-word;
 }
+
 .author {
     width: 100%;
     font-size: 15px;
@@ -111,6 +201,7 @@ body {
     position: relative;
     z-index: 1;
 }
+
 .button {
     width: 200px;
     padding: 14px 22px;
@@ -123,15 +214,17 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease,
-                box-shadow 0.3s ease;
+        box-shadow 0.3s ease;
     position: relative;
     z-index: 1;
 }
+
 .button:hover {
     background: #1E1B4B;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(2, 53, 173, 0.2);
 }
+
 .back-home {
     margin-top: 3px;
     color: #0235AD;
@@ -147,7 +240,6 @@ body {
     color: #1E1B4B;
 }
 
-/* RESPONSIVENESS */
 @media (max-width: 768px) {
     .generator {
         padding: 35px 20px;
@@ -174,8 +266,6 @@ body {
         line-height: 1.7;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 480px) {
     .generator {
