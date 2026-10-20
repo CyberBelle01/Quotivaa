@@ -1,24 +1,22 @@
-/* RESET */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-
-/* BODY */
-
 body {
     width: 100%;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-color: #F8FAFC;
-    color: #1E1B4B;
+    background: linear-gradient(135deg, #F8FAFC, #EAF1FF);
+    background:
+    linear-gradient(
+        rgba(248, 250, 252, 0.55),
+        rgba(234, 241, 255, 0.62)
+    ),
+    url("image3.png") center / cover no-repeat;
+
+
 }
-
-
-/* GENERATOR */
 
 .generator {
     width: 100%;
@@ -27,145 +25,133 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
     padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
 }
-
-
-/* LOGO */
-
 .generator-brand {
     margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+    height: 110px;
+    /* background-color: red; */
 }
-
 .generator-brand a {
     display: block;
 }
-
 .generator-brand img {
-    width: 150px;
+    width: 200px;
     height: auto;
-    display: block;
+    
 }
-
-
-/* HEADING */
-
 .generator h1 {
     font-size: 32px;
     font-weight: 700;
     color: #1E1B4B;
     text-align: center;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
 }
-
-
-/* WELCOME TEXT */
-
 .welcome-text {
-    font-size: 16px;
-    color: #64748B;
+    font-size: 15px;
+    color:  gray;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
 }
-
-
-/* QUOTE BOX */
-
 .quote-hold {
-    width: min(80%, 900px);
-    min-height: 200px;
-
+    width: min(90%, 650px);
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    gap: 20px;
-
-    background-color: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    border-radius: 16px;
-
-    padding: 40px;
-
-    box-shadow: 0 10px 30px rgba(2, 53, 173, 0.07);
+    gap: 24px;
+    background: linear-gradient(145deg, #1E1B4B, #0B173F 75%, #0235AD);
+    border: 1px solid rgba(147, 197, 253, 0.3);
+    border-radius: 22px;
+    padding: 45px 50px;
+    box-shadow: 0 20px 50px rgba(11, 23, 63, 0.18);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
-
-
-/* QUOTE */
-
+.quote-hold::before {
+    content: "“";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-family: Georgia, serif;
+    font-size: 150px;
+    line-height: 1;
+    color: rgba(147, 197, 253, 0.12);
+    pointer-events: none;
+}
 .quotes {
     width: 100%;
-    font-size: 22px;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    line-height: 1.8;
     font-weight: 500;
-    color: #0235AD;
+    color: #FFFFFF;
     text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow-wrap: break-word;
 }
-
-
-/* AUTHOR */
-
 .author {
     width: 100%;
-    font-size: 16px;
-    color: #64748B;
+    font-size: 15px;
+    color: #BFDBFE;
     text-align: right;
+    position: relative;
+    z-index: 1;
 }
-
-
-/* GENERATE BUTTON */
-
 .button {
-    width: 190px;
-    padding: 13px 20px;
-
-    background-color: #0235AD;
+    width: 200px;
+    padding: 14px 22px;
+    background: #0235AD;
     color: #FFFFFF;
-
     font-family: inherit;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-
     border: 1px solid transparent;
-    border-radius: 8px;
-
+    border-radius: 10px;
     cursor: pointer;
-
-    transition: 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease,
+                box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
-
 .button:hover {
-    background-color: #1E1B4B;
-    transform: translateY(-2px);
+    background: #1E1B4B;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(2, 53, 173, 0.2);
 }
-
-
-/* BACK TO HOME */
-
 .back-home {
-    margin-top: 5px;
-
+    margin-top: 3px;
     color: #0235AD;
     font-size: 14px;
     font-weight: 500;
-
     text-decoration: none;
-
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .back-home:hover {
     color: #1E1B4B;
 }
 
-
-/* TABLET */
-
+/* RESPONSIVENESS */
 @media (max-width: 768px) {
-
     .generator {
-        padding: 40px 20px;
+        padding: 35px 20px;
+        gap: 16px;
     }
 
     .generator-brand img {
@@ -178,21 +164,23 @@ body {
 
     .quote-hold {
         width: 90%;
-        padding: 30px;
+        min-height: 280px;
+        padding: 35px 30px;
+        border-radius: 20px;
     }
 
     .quotes {
-        font-size: 20px;
+        font-size: 21px;
+        line-height: 1.7;
     }
 }
-
 
 /* MOBILE */
 
 @media (max-width: 480px) {
-
     .generator {
-        padding: 30px 15px;
+        padding: 30px 16px;
+        gap: 15px;
     }
 
     .generator-brand img {
@@ -200,28 +188,44 @@ body {
     }
 
     .generator h1 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .welcome-text {
-        font-size: 14px;
+        font-size: 13px;
+        margin-bottom: 8px;
     }
 
     .quote-hold {
         width: 100%;
-        min-height: 190px;
-        padding: 25px 20px;
+        min-height: 260px;
+        padding: 35px 22px;
+        gap: 20px;
+        border-radius: 18px;
+    }
+
+    .quote-hold::before {
+        font-size: 110px;
+        top: -5px;
+        left: 10px;
     }
 
     .quotes {
         font-size: 18px;
+        line-height: 1.8;
     }
 
     .author {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .button {
         width: 180px;
+        padding: 13px 18px;
+        font-size: 14px;
+    }
+
+    .back-home {
+        font-size: 13px;
     }
 }

@@ -152,8 +152,8 @@ const quotes = [
         author: "Daniel Morgan"
     },
     {
-        text: "The people who succeed are not always the ones who begin with the most advantages. Sometimes they are simply the ones who continue.",
-        author: "Samuel Wright"
+        text: "Don't be afraid to start small. Every great achievement begins with a single step ",
+        author: "Flourish Okafor"
     },
     {
         text: "If you spend every day waiting until you feel ready, you may never begin. Start where you are and improve as you go.",
