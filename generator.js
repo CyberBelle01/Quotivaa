@@ -1,3 +1,17 @@
+
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector("nav");
+
+hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+
+
+
+
+
+
 const quotes = [
     {
         text: "Success does not always arrive when you expect it. Sometimes, it comes quietly after you have spent a long time refusing to give up.",
@@ -217,3 +231,10 @@ function generateQuote() {
 }
 
 generateQuote();
+
+
+
+
+
+
+
