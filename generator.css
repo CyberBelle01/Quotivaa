@@ -3,76 +3,81 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     width: 100%;
     min-height: 100vh;
-    
+    font-family: 'Poppins', sans-serif;
+    background:
+        linear-gradient(
+            rgba(248, 250, 252, 0.55),
+            rgba(234, 241, 255, 0.62)
+        ),
+        url("image3.png") center / cover no-repeat;
 }
 
-header{
+header {
     height: 160px;
     width: 100%;
-    /* background-color: #89CFEF; */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1000;
 }
-.header-container{
+
+.header-container {
     width: 88%;
     height: 53%;
     background-color: white;
     border-radius: 8px;
     display: flex;
     justify-content: center;
-   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-.header-wrapper{
-    
+
+.header-wrapper {
     height: 100%;
     width: 95%;
-    /* background-color: purple; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo{
+
+.logo {
     height: 200px;
     width: 200px;
-    /* background-color: gray; */
     display: flex;
     justify-content: center;
-    & img{
-        width: 100%;
-        height: 100%;
-        
-    }
 }
-nav{
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
     height: 60%;
     width: 45%;
-    /* background-color: chartreuse; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    & a{
-        text-decoration: none;
-        font-family: sans-serif;
-        font-size: 19px;
-        color: #061D55;
-        cursor: pointer;
-    }
 }
-a:hover{
+
+nav a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 19px;
+    color: #061D55;
+    cursor: pointer;
+}
+
+a:hover {
     color: #0235AD;
 }
-.button1{
-    padding: 13px 40px 13px 40px;
+
+.button1 {
+    padding: 13px 40px;
     background-color: #0235AD;
     color: white;
     border-radius: 5px;
@@ -81,34 +86,48 @@ a:hover{
     border: 1px solid transparent;
 }
 
-.button1:hover{
+.button1:hover {
     color: #0235AD;
     border-color: #0235AD;
     border-radius: 40px;
     background-color: white;
     transition-duration: 0.5s;
 }
-.hamburger{
+
+.hamburger {
     width: 30px;
     height: 30px;
     display: none;
     color: #059669;
 }
 
-
-
-
 .generator {
-    background-color: #89CFEF;
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: center;
+    gap: 18px;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.generator-brand {
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+    height: 110px;
+}
+
+.generator-brand a {
+    display: block;
+}
+
+.generator-brand img {
+    width: 200px;
+    height: auto;
 }
 
 .generator h1 {
@@ -120,15 +139,17 @@ a:hover{
     position: relative;
     z-index: 1;
 }
+
 .welcome-text {
     font-size: 15px;
-    color:  gray;
+    color: gray;
     text-align: center;
     margin-bottom: 12px;
     line-height: 1.7;
     position: relative;
     z-index: 1;
 }
+
 .quote-hold {
     width: min(90%, 650px);
     min-height: 300px;
@@ -146,6 +167,7 @@ a:hover{
     overflow: hidden;
     z-index: 1;
 }
+
 .quote-hold::before {
     content: "“";
     position: absolute;
@@ -157,6 +179,7 @@ a:hover{
     color: rgba(147, 197, 253, 0.12);
     pointer-events: none;
 }
+
 .quotes {
     width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -169,6 +192,7 @@ a:hover{
     z-index: 1;
     overflow-wrap: break-word;
 }
+
 .author {
     width: 100%;
     font-size: 15px;
@@ -177,6 +201,7 @@ a:hover{
     position: relative;
     z-index: 1;
 }
+
 .button {
     width: 200px;
     padding: 14px 22px;
@@ -189,15 +214,17 @@ a:hover{
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease,
-                box-shadow 0.3s ease;
+        box-shadow 0.3s ease;
     position: relative;
     z-index: 1;
 }
+
 .button:hover {
     background: #1E1B4B;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(2, 53, 173, 0.2);
 }
+
 .back-home {
     margin-top: 3px;
     color: #0235AD;
@@ -213,7 +240,6 @@ a:hover{
     color: #1E1B4B;
 }
 
-/* RESPONSIVENESS */
 @media (max-width: 768px) {
     .generator {
         padding: 35px 20px;
@@ -240,8 +266,6 @@ a:hover{
         line-height: 1.7;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 480px) {
     .generator {
