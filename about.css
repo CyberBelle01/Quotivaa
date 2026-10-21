@@ -431,12 +431,7 @@ nav a:hover {
     display: flex;
 }
 
-    nav,
-    header{
-        a{
-        display: none;
-        }
-    }
+   
 
     .hamburger {
         display: block;
