@@ -118,8 +118,8 @@ const quotes = [
         author: "Stephen Walker"
     },
     {
-        text: "The hardest part of many journeys is not reaching the destination but convincing yourself that you are capable of beginning.",
-        author: "Charles Bennett"
+        text: "The best is yet to come",
+        author: "Lemoh Yasir"
     },
     {
         text: "Do something today that makes tomorrow easier. The smallest useful action can become the beginning of a much bigger change.",
