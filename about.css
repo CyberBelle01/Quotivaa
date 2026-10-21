@@ -431,12 +431,26 @@ nav a:hover {
     display: flex;
 }
 
-    nav,
-    header{
-        a{
-        display: none;
-        }
-    }
+
+.button1 {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 8px;
+
+    background-color: #1E1B4B;
+    color: #FFFFFF;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+   
 
     .hamburger {
         display: block;
