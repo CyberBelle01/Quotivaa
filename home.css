@@ -78,7 +78,7 @@ nav a:hover {
     background-color: #1E1B4B;
     color: #FFFFFF;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
     border: 1px solid transparent;
     transition: 0.3s ease;
@@ -459,6 +459,7 @@ nav a:hover {
 .letter-section {
     padding: 100px 8%;
     background: #F8FAFC;
+    width: 88%;
 }
 
 .letter-container {
@@ -554,9 +555,11 @@ nav a:hover {
 
 /* INSPIRE */
 .inspire-section {
-    padding: 100px 7%;
+    /* padding: 100px 7%; */
     background: #F8FAFC;
     color: #1E1B4B;
+    width: 88%;
+
 }
 .inspire-container {
     position: relative;
@@ -659,7 +662,7 @@ nav a:hover {
 .brand-section {
     padding: 45px 3% 20px;
     overflow: hidden;
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
 }
 .brand-container {
     max-width: 1500px;
@@ -668,7 +671,7 @@ nav a:hover {
 .brand-tagline {
     margin: 0 0 15px;
     text-align: center;
-    color: #0235AD;
+    color: #89CFEF;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -680,10 +683,10 @@ nav a:hover {
 }
 .brand-wordmark span {
     display: block;
-    font-size: 200px;
+    font-size: 150px;
     font-weight: 900;
     line-height: 0.95;
-    color: #1E1B4B;
+    color:  white;
 }
 
 
@@ -693,7 +696,8 @@ nav a:hover {
     background-color: #1E1B4B;
     color: #FFFFFF;
     margin-top: 20px;
-    padding: 25px 0 0;
+    height: 700px;
+    
 }
 .footer-container {
     width: 90%;

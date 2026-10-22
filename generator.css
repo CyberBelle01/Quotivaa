@@ -8,12 +8,7 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background:
-        linear-gradient(
-            rgba(248, 250, 252, 0.55),
-            rgba(234, 241, 255, 0.62)
-        ),
-        url("image3.png") center / cover no-repeat;
+    
 }
 
 
