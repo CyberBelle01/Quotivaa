@@ -1,205 +1,249 @@
 
-
 const quotes = [
     {
-        text: "Success does not always arrive when you expect it. Sometimes, it comes quietly after you have spent a long time refusing to give up.",
-        author: "Marcus Ellison"
+        text: "Sometimes, growing up means accepting that the people you started with may not be the people who finish the journey with you. Appreciate the memories, learn from the changes, and keep making room for the experiences that will shape who you become.",
+        author: "Marcus Ellison",
+        category: "life"
     },
     {
-        text: "You do not need to have everything figured out before you take the first step. Progress often begins with nothing more than courage.",
-        author: "Daniel Brooks"
+        text: "You do not need to have everything figured out before taking the first step. Most people discover their strengths through experience, not endless planning. Begin with what you know, learn what you do not, and allow consistent effort to build your confidence.",
+        author: "Daniel Brooks",
+        category: "motivation"
     },
     {
-        text: "The mistakes you make today can become the lessons that guide you toward better decisions tomorrow, if you are willing to learn from them.",
-        author: "Nathan Cole"
+        text: "Success becomes more meaningful when you can look back and recognize the person you had to become to achieve it. The discipline, patience, and lessons you gain along the way may eventually matter just as much as the destination you worked so hard to reach.",
+        author: "Nathan Cole",
+        category: "success"
     },
     {
-        text: "A difficult beginning does not mean you are heading toward a difficult ending. Keep moving, keep learning, and give yourself time to grow.",
-        author: "Adrian Miles"
+        text: "Real affection is often found in the little things people do without expecting applause. It is the thoughtful message, the patient conversation, and the willingness to listen when life feels overwhelming. Sometimes, the smallest gestures leave the deepest impressions.",
+        author: "Amara Bennett",
+        category: "love"
     },
     {
-        text: "Your future is built from the small decisions you make when nobody is watching. Choose habits that your future self will appreciate.",
-        author: "Ethan Parker"
+        text: "Not every opportunity deserves a yes, and not every disagreement deserves your attention. Wisdom includes knowing what deserves your energy, what requires patience, and what you must leave behind. Protecting your time can be just as important as using it well.",
+        author: "Ethan Hayes",
+        category: "wisdom"
     },
     {
-        text: "There will be days when your progress feels invisible, but remember that roots grow beneath the ground long before a tree becomes visible.",
-        author: "Samuel Carter"
+        text: "Never allow embarrassment to convince you that learning is something to hide. Every skilled person once asked basic questions, made avoidable mistakes, and struggled with unfamiliar ideas. Give yourself permission to be a beginner, because progress often begins where pride ends.",
+        author: "Sophia Williams",
+        category: "motivation"
     },
     {
-        text: "Do not allow one disappointing moment to convince you that your entire journey has failed. A setback is only one chapter of your story.",
-        author: "Julian Hayes"
+        text: "The people worth keeping in your life will make an effort to understand you, even when they do not immediately agree with you. Healthy relationships are not built on perfect understanding, but on mutual respect, honest communication, and the willingness to keep trying.",
+        author: "Caleb Morgan",
+        category: "love"
     },
     {
-        text: "The person you want to become is created through repeated choices, patient effort, and the willingness to continue when motivation disappears.",
-        author: "Oliver Bennett"
+        text: "A setback can reveal weaknesses in your plan without proving that your entire dream is impossible. Examine what happened, identify what you can improve, and return with a clearer strategy. Sometimes, the experience that disappoints you today prepares you for tomorrow's opportunity.",
+        author: "Isabella James",
+        category: "success"
     },
     {
-        text: "Sometimes the bravest thing you can do is begin again, especially when you know exactly how painful the previous attempt was.",
-        author: "Caleb Morgan"
+        text: "You cannot prevent every difficult situation, but you can learn to meet challenges without allowing them to define your entire world. Pause before reacting, consider your options, and remember that a thoughtful response can create possibilities that anger or fear might overlook.",
+        author: "David Carter",
+        category: "wisdom"
     },
     {
-        text: "Dreams become more powerful when you stop waiting for the perfect moment and start working with the opportunities that are already around you.",
-        author: "Isaac Reynolds"
+        text: "Life is not made meaningful only by extraordinary achievements or unforgettable adventures. It is also found in familiar conversations, shared laughter, quiet evenings, and the people who make ordinary days feel special. Do not overlook the beauty of the life happening around you.",
+        author: "Olivia Reed",
+        category: "life"
     },
     {
-        text: "You cannot control every circumstance that enters your life, but you can control the attitude and effort you bring to each situation.",
-        author: "Aaron Mitchell"
+        text: "There will be moments when your effort seems to produce nothing, and doubt begins to question whether continuing is worthwhile. Remember that improvement is not always immediately visible. Keep learning, remain willing to adjust, and give your hard work enough time to develop.",
+        author: "Michael Foster",
+        category: "motivation"
     },
     {
-        text: "Growth often feels uncomfortable because it requires you to leave behind habits, thoughts, and fears that once made you feel safe.",
-        author: "Leonard Brooks"
+        text: "Money can create opportunities, but your decisions determine what you build with them. Pursue financial independence without forgetting your values, relationships, or personal growth. The goal is not simply to possess more, but to create a life in which your achievements serve a meaningful purpose.",
+        author: "Grace Mitchell",
+        category: "success"
     },
     {
-        text: "Do not measure your journey only by how far you have left to go. Take time to recognize how far you have already traveled.",
-        author: "Michael Foster"
+        text: "Sometimes, the best way to show someone they matter is to give them your full attention. Put aside distractions, listen without preparing your next response, and take their feelings seriously. Being truly present can communicate care more clearly than a hundred empty promises.",
+        author: "Samuel Bennett",
+        category: "love"
     },
     {
-        text: "A strong future is rarely created in one extraordinary moment. It is usually built through ordinary days filled with consistent effort.",
-        author: "Thomas Reed"
+        text: "Intelligence is not measured only by how quickly you answer a question. It also appears in your willingness to reconsider an opinion, admit uncertainty, and learn from people whose experiences differ from yours. The mind grows when curiosity becomes more important than always being right.",
+        author: "Victoria Hayes",
+        category: "wisdom"
     },
     {
-        text: "When you are tempted to quit, remember why you started and consider whether the obstacle in front of you deserves the power to stop you.",
-        author: "Henry Wallace"
+        text: "You are not required to remain loyal to a version of yourself that no longer reflects what you have learned. Your interests can change, your priorities can mature, and your plans can take a different direction. Growth sometimes means giving yourself permission to begin again.",
+        author: "Jordan Ellis",
+        category: "life"
     },
     {
-        text: "Knowledge becomes valuable when you use it to solve problems, help others, and create something that did not exist before.",
-        author: "Victor Lawson"
+        text: "Confidence is not always a feeling that arrives before a challenge. Sometimes, it is the understanding that you can face uncertainty, ask for help, and learn along the way. Take the opportunity even when you feel nervous, and let experience teach you what preparation alone cannot.",
+        author: "Chloe Anderson",
+        category: "motivation"
     },
     {
-        text: "You may not be the best person in the room today, but you can choose to be the person who learns the most.",
-        author: "Benjamin Scott"
+        text: "A strong reputation is built long before the biggest opportunity arrives. The way you keep small promises, respond to criticism, and treat people when nothing is at stake gradually determines whether others can trust you with something important.",
+        author: "Benjamin Clarke",
+        category: "success"
     },
     {
-        text: "Confidence is not knowing that everything will work perfectly. It is trusting yourself enough to handle things when they do not.",
-        author: "Edward Grant"
+        text: "Love should not require you to silence every opinion or abandon every part of yourself. A caring relationship allows both people to speak honestly, maintain their individuality, and work through disagreements without using affection as a weapon. Respect should remain even during difficult conversations.",
+        author: "Zara Thompson",
+        category: "love"
     },
     {
-        text: "The road to meaningful achievement is rarely straight. Sometimes getting lost teaches you more than following the original direction ever could.",
-        author: "George Anderson"
+        text: "Not every criticism is an attack, and not every compliment is proof that you are doing everything right. Consider the source, examine the evidence, and decide what is useful. Learning to separate honest feedback from empty judgment can make your decisions much clearer.",
+        author: "Alexander Brooks",
+        category: "wisdom"
     },
     {
-        text: "Your circumstances may influence where you begin, but they do not have to determine how far you are willing to go.",
-        author: "Robert Harrison"
+        text: "Your timeline does not need to match someone else's to be worthwhile. People begin with different resources, responsibilities, and opportunities, so comparison rarely tells the complete story. Concentrate on what you can learn today and let your own progress become the measure that guides you.",
+        author: "Naomi Williams",
+        category: "life"
     },
     {
-        text: "Every skill that feels difficult today was once something you did not know how to do. Give yourself permission to be a beginner.",
-        author: "James Carter"
+        text: "When your original plan stops working, do not assume that your only choices are to quit or keep struggling in exactly the same way. Take an honest look at the situation, seek better information, and make adjustments that move you closer to what matters.",
+        author: "Gabriel Wright",
+        category: "motivation"
     },
     {
-        text: "Do not spend so much time comparing your chapter one with someone else's chapter twenty. Everyone's journey develops at a different pace.",
-        author: "William Turner"
+        text: "Lasting achievement usually comes from ordinary actions repeated with care. One study session, one improved skill, and one difficult task completed may not seem impressive alone, but together they create momentum. Respect the small steps because meaningful progress is often built quietly.",
+        author: "Ava Collins",
+        category: "success"
     },
     {
-        text: "The ability to keep learning after failure is one of the greatest advantages you can give yourself in life.",
-        author: "Alexander Moore"
+        text: "Caring about someone does not mean you must agree with every choice they make. You can express concern, offer advice, and remain supportive while respecting their ability to decide. Genuine care makes room for honesty without turning concern into control.",
+        author: "Isaac Turner",
+        category: "love"
     },
     {
-        text: "Small improvements may seem insignificant when viewed alone, but repeated consistently, they can completely transform the direction of your life.",
-        author: "Christopher Adams"
+        text: "Before deciding that someone is wrong, make sure you understand what they are actually saying. Assumptions can turn simple misunderstandings into unnecessary conflict. Ask questions, listen carefully, and judge the argument on its merits rather than on how unfamiliar it sounds.",
+        author: "Maya Richardson",
+        category: "wisdom"
     },
     {
-        text: "You cannot change yesterday, but you can decide what lesson you will carry from it into everything you do tomorrow.",
-        author: "Matthew Lewis"
+        text: "You do not have to figure out your entire future in one afternoon. Some answers become clearer only after you try something, discover what matters to you, and learn from the results. Take the next sensible step instead of demanding certainty about every step ahead.",
+        author: "Daniel Parker",
+        category: "life"
     },
     {
-        text: "Great ideas often begin as imperfect thoughts. Do not reject an idea simply because you have not yet discovered how to improve it.",
-        author: "Andrew Collins"
+        text: "Your past mistakes deserve reflection, not permanent control over your future. Accept responsibility, apologize where necessary, and learn what you can do differently next time. You cannot rewrite every decision you regret, but you can use what happened to make wiser choices now.",
+        author: "Leah Morgan",
+        category: "motivation"
     },
     {
-        text: "Patience is not doing nothing while waiting for success. It is continuing to work while understanding that meaningful results take time.",
-        author: "Jonathan Pierce"
+        text: "People may celebrate your final achievement without seeing the difficult decisions and repeated attempts behind it. Do not let the absence of recognition convince you that your effort is meaningless. Build your skills, improve your work, and remember that progress matters before applause arrives.",
+        author: "Noah Campbell",
+        category: "success"
     },
     {
-        text: "Sometimes progress means moving forward, and sometimes it means stopping long enough to understand which direction you should take next.",
-        author: "Nicholas Wright"
+        text: "Sometimes, the kindest thing you can do for someone is to support their growth even when it changes the relationship. People need room to discover their interests, develop their confidence, and make independent decisions. Caring deeply should not mean keeping someone exactly as they are.",
+        author: "Amara Johnson",
+        category: "love"
     },
     {
-        text: "Your potential is not measured by what you already know. It is also measured by how willing you are to learn what you do not know.",
-        author: "Stephen Walker"
+        text: "A confident voice can make an idea sound convincing, but confidence alone cannot make it true. Look for evidence, examine the reasoning, and remain willing to question information that supports what you already believe. Good judgment requires curiosity as well as conviction.",
+        author: "Elijah Scott",
+        category: "wisdom"
     },
     {
-        text: "The hardest part of many journeys is not reaching the destination but convincing yourself that you are capable of beginning.",
-        author: "Charles Bennett"
+        text: "You may discover that the future you once wanted no longer fits the person you are becoming. That realization does not make your earlier dreams foolish. It means experience has given you new information, and you now have an opportunity to choose your direction more thoughtfully.",
+        author: "Esther Adeyemi",
+        category: "life"
     },
     {
-        text: "Do something today that makes tomorrow easier. The smallest useful action can become the beginning of a much bigger change.",
-        author: "Daniel Harper"
+        text: "A difficult start does not determine how far you can eventually go. Limited resources and unfamiliar challenges may require you to learn creatively, seek support, and move patiently, but they do not erase your ability to improve. Begin with what you have and keep developing.",
+        author: "Tobi Adebayo",
+        category: "motivation"
     },
     {
-        text: "You will encounter people who doubt your abilities, but their opinion does not have to become the limit you place on yourself.",
-        author: "Ryan Mitchell"
+        text: "Professional success is not only about producing impressive work; it is also about making collaboration easier. Communicate clearly, admit when something goes wrong, respect other people's time, and follow through on commitments. Reliability can turn a good opportunity into a lasting relationship.",
+        author: "David Okafor",
+        category: "success"
     },
     {
-        text: "Failure becomes less frightening when you understand that it can provide information about what needs to change before your next attempt.",
-        author: "Jason Miller"
+        text: "A relationship becomes more secure when both people can admit mistakes without fearing that every disagreement will become a competition. Listening, taking responsibility, and making sincere efforts to repair hurt create the conditions for trust to deepen over time.",
+        author: "Aisha Bello",
+        category: "love"
     },
     {
-        text: "The most valuable lessons are sometimes hidden inside experiences you never wanted to have. Look carefully before deciding that they were wasted.",
-        author: "Patrick Evans"
+        text: "Patience is not the same as doing nothing and hoping for a better outcome. Real patience means continuing useful work while accepting that some results need time. Prepare carefully, remain flexible, and resist the temptation to abandon a worthwhile goal simply because it is taking longer than expected.",
+        author: "Chinonso Eze",
+        category: "wisdom"
     },
     {
-        text: "A goal becomes easier to approach when you stop thinking about the entire mountain and focus on the next step.",
-        author: "Benjamin Hayes"
+        text: "Some of the moments you remember most fondly may not be the ones you planned. An unexpected conversation, a shared joke, or a simple day with people who care about you can become a treasured memory. Make room for joy beyond your schedule.",
+        author: "Kemi Adeola",
+        category: "life"
     },
     {
-        text: "Your attention is one of your most valuable resources. Spend it on things that help you become the person you want to be.",
-        author: "Marcus Bennett"
+        text: "Not everyone will understand what you are trying to build, especially when your progress is still difficult to see. Listen to thoughtful advice, but do not let every doubt become a reason to stop. Keep learning, test your ideas, and let your actions provide clearer answers.",
+        author: "Favour Nwosu",
+        category: "motivation"
     },
     {
-        text: "Being talented can open a door, but discipline is what helps you keep walking when the excitement of starting has disappeared.",
-        author: "David Anderson"
+        text: "Setbacks can test your plans without cancelling your potential. Sometimes you will need to change your method, learn a missing skill, or ask for help you previously avoided. Adaptability allows you to keep pursuing a meaningful goal without pretending every part of the journey will be easy.",
+        author: "Samuel Osei",
+        category: "success"
     },
     {
-        text: "You are allowed to change your plans when you discover a better direction. Changing course is not the same thing as giving up.",
-        author: "Daniel Morgan"
+        text: "An apology matters most when it shows that you understand what went wrong and are prepared to act differently. Words can open the door to forgiveness, but consistent behaviour helps rebuild trust. Take responsibility without demanding that another person immediately forget their hurt.",
+        author: "Imani Clarke",
+        category: "love"
     },
     {
-        text: "Don't be afraid to start small. Every great achievement begins with a single step ",
-        author: "Flourish Okafor"
+        text: "Being open-minded does not require you to believe everything you hear. It requires you to consider unfamiliar ideas fairly, ask useful questions, and examine the evidence before reaching a conclusion. You can remain curious while still holding carefully considered values and principles.",
+        author: "Daniel Mensah",
+        category: "wisdom"
     },
     {
-        text: "If you spend every day waiting until you feel ready, you may never begin. Start where you are and improve as you go.",
-        author: "Alexander Grant"
+        text: "The people you meet can teach you more than what to admire; they can also help you recognize what matters to you. Notice the qualities you respect, the choices you question, and the experiences that change your perspective. Use those lessons to shape your own values.",
+        author: "Ruth Lawson",
+        category: "life"
     },
     {
-        text: "A quiet effort repeated every day can eventually become louder than a thousand promises made without action.",
-        author: "Elliot Parker"
+        text: "You do not need perfect circumstances to begin improving your life. You may have limited time, incomplete knowledge, or a plan that still needs work. Start with one realistic action, learn from the result, and use what you discover to make the next step more effective.",
+        author: "Nathaniel King",
+        category: "motivation"
     },
     {
-        text: "Do not let the fear of making a wrong decision prevent you from making any decision at all. Learn, adjust, and keep moving.",
-        author: "Nathan Brooks"
+        text: "Long-term goals become easier to pursue when your daily habits support them. Motivation may rise and fall, but a manageable routine gives you something dependable to return to. Focus on building a process you can sustain rather than expecting yourself to feel inspired every single day.",
+        author: "Adaobi Obi",
+        category: "success"
     },
     {
-        text: "The future does not ask you to be perfect. It asks you to keep becoming better than the person you were yesterday.",
-        author: "Lucas Bennett"
+        text: "The people who truly value you will not always know the perfect words to say, but they will make an effort to understand what you need. Consistent consideration, honest conversations, and respect during difficult moments often reveal more about affection than grand promises do.",
+        author: "Michael Adams",
+        category: "love"
     },
     {
-        text: "Sometimes the opportunity you are looking for is hidden inside the responsibility you are currently trying to avoid.",
-        author: "Andrew Parker"
+        text: "You can stand firmly by your beliefs without humiliating someone who disagrees with you. Explain your reasoning, listen to their perspective, and recognize when a conversation has become unproductive. Strong principles do not require disrespect, and disagreement does not have to become hostility.",
+        author: "Sarah Coleman",
+        category: "wisdom"
     },
     {
-        text: "You cannot always choose the challenges you face, but you can choose whether those challenges become excuses or opportunities to grow.",
-        author: "Ryan Carter"
+        text: "Do not become so focused on the person you hope to be that you ignore the person you are today. Your ambitions deserve effort, but so do your friendships, your curiosity, and your well-being. Build toward the future while remaining present for the life you already have.",
+        author: "Josephine Gray",
+        category: "life"
     },
     {
-        text: "Every expert was once unfamiliar with the things they now understand. Never confuse being inexperienced with being incapable.",
-        author: "Thomas Mitchell"
+        text: "When uncertainty makes you doubt yourself, focus on the parts of the challenge you can actually influence. Practise the skill, ask for feedback, and prepare for different outcomes. You cannot guarantee that every attempt will succeed, but you can make each attempt a chance to learn.",
+        author: "Emmanuel James",
+        category: "motivation"
     },
     {
-        text: "The best time to improve your life is not when everything becomes easy. It is when you decide that difficulty will not stop you.",
-        author: "James Reynolds"
+        text: "Trust grows when your actions consistently match your promises. You do not need to impress everyone with ambitious claims; you need to be honest about what you can do and dependable about what you agree to do. Small acts of integrity can build a reputation that lasts.",
+        author: "Faith Williams",
+        category: "success"
     },
     {
-        text: "Your journey may look completely different from everyone else's, and that is perfectly fine. Different paths can still lead to meaningful destinations.",
-        author: "Oliver Morgan"
+        text: "Strong relationships are not built by avoiding every uncomfortable conversation. They grow when people can speak honestly, listen without rushing to defend themselves, and take responsibility for their actions. Conflict may still happen, but mutual respect can help both people find a healthier way forward.",
+        author: "Christopher Dean",
+        category: "love"
     },
     {
-        text: "If you keep showing up, keep learning, and keep adjusting, eventually the things that once seemed impossible can become part of your normal routine.",
-        author: "Ethan Brooks"
-    },
-    {
-        text: "Do not underestimate what can happen when curiosity, patience, and consistent effort are combined over a long period of time.",
-        author: "Michael Reynolds"
+        text: "You cannot control how every person interprets your decisions, and exhausting yourself trying to please everyone will leave little room for your own priorities. Listen when feedback is sincere, reconsider your choices when evidence calls for it, and continue making thoughtful decisions that reflect your values.",
+        author: "Abigail Ross",
+        category: "wisdom"
     }
 ];
 
@@ -207,22 +251,24 @@ const quotes = [
 const quoteText = document.getElementById("quote-text");
 const quoteAuthor = document.getElementById("quote-author");
 const generateBtn = document.getElementById("generate-btn");
-
-generateBtn.addEventListener("click", generateQuote);
+const categorySelect = document.getElementById("category-select");
 
 function generateQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    const randomQuote = quotes[randomIndex];
-    quoteText.textContent = randomQuote.text;
-    quoteAuthor.textContent = "- " + randomQuote.author;
-    
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+    let randomQuote = quotes[randomIndex];
+
+    if (categorySelect.value === "all") {
+        quoteText.textContent = randomQuote.text;
+        quoteAuthor.textContent = "- " + randomQuote.author;
+    } else {
+        if (randomQuote.category === categorySelect.value) {
+            quoteText.textContent = randomQuote.text;
+            quoteAuthor.textContent = "- " + randomQuote.author;
+        } else {
+            generateQuote();
+        }
+    }
 }
 
-generateQuote();
-
-
-
-
-
-
-
+generateBtn.addEventListener("click", generateQuote);
+categorySelect.addEventListener("change", generateQuote);

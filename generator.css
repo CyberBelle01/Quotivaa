@@ -150,6 +150,42 @@ a:hover {
     z-index: 1;
 }
 
+
+
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.category-container label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1E1B4B;
+}
+
+#category-select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    color: #061D55;
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}
+
+#category-select:focus {
+    border-color: #0235AD;
+    box-shadow: 0 0 0 3px rgba(2, 53, 173, 0.12);
+}
+
+
 .quote-hold {
     width: min(90%, 650px);
     min-height: 300px;
