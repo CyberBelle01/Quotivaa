@@ -144,8 +144,6 @@ const quotes = [
         text: "A confident voice can make an idea sound convincing, but confidence alone cannot make it true. Look for evidence, examine the reasoning, and remain willing to question information that supports what you already believe. Good judgment requires curiosity as well as conviction.",
         author: "Elijah Scott",
         category: "wisdom"
-        text: "The best is yet to come",
-        author: "Lemoh Yasir"
     },
     {
         text: "You may discover that the future you once wanted no longer fits the person you are becoming. That realization does not make your earlier dreams foolish. It means experience has given you new information, and you now have an opportunity to choose your direction more thoughtfully.",
