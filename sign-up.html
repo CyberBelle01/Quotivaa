@@ -6,52 +6,90 @@
     <title>Sign Up - Quotivaa</title>
     <link rel="stylesheet" href="sign-up.css">
 </head>
+
 <body>
-
     <div class="signup-container" id="signup-container">
-        <div class="signup-header" id="signup-header">
-            <div class="logo" id="logo">
-                <a href="index.html">
-                    <img src="logo.png" alt="Quotivaa Logo" class="form-logo" id="form-logo">
-                </a>
+
+        <div class="left-banner" id="left-banner">
+            <div class="banner-content" id="banner-content">
+
+                <div class="brand-logo" id="brand-logo">
+                    <h1>Quotivaa</h1>
+                </div>
+
+                <blockquote class="quote-text" id="quote-text">
+                    "The future depends on what you do today."
+                    <span class="quote-author" id="quote-author">
+                        — Mahatma Gandhi
+                    </span>
+                </blockquote>
             </div>
-            <h2 class="title" id="title">Sign up to your account</h2>
+
         </div>
-        <form action="generator.html">
-            <div class="input-group" id="input-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" placeholder="Full Name" required>
-            </div>
 
-            <div class="input-group" id="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Username" required>
-            </div>
+        <div class="right-form-area" id="right-form-area">
+            <div class="form-wrapper" id="form-wrapper">
 
-            <div class="input-group" id="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email" required>
-            </div>
+                <a href="index.html">
+                    <img src="logo.png" alt="Quotivaa Logo" class="form-logo" id="form-logo"></a>
 
-            <div class="input-group" id="input-group">
-                <label for="password">Password</label>
-                <div class="password-wrapper">
-                    <input type="password" id="password" placeholder="Password" required>
-                </div>
-            </div>
+                <h2>Create your account</h2>
+                <p class="subtitle" id="subtitle">
+                    Sign up to start your personal quote experience.
+                </p>
 
-            <div class="input-group" id="input-group">
-                <label for="confirm-password">Confirm Password</label>
-                <div class="password-wrapper" id="password-wrapper">
-                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-                </div>
+                <form action="generator.html">
+
+                    <div class="input-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Full Name" required>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+
+                        <div class="password-wrapper">
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+
+                        <div class="password-wrapper">
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                placeholder="Confirm your password"
+                                required
+                            >
+                        </div>
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn-signup"
+                        id="btn-signup"
+                    >
+                        Sign Up
+                    </button>
+                    <p class="footer-text" id="footer-text">
+                        Already have an account?
+                        <a href="login.html">Login</a>
+                    </p>
+
+                </form>
             </div>
-            
-            <button type="submit" class="btn-signup" id="btn-signup">Sign Up</button>
-            
-            <p class="footer-text" id="footer-text">Already have an account? <a href="login.html">Login</a></p>
-        </form>
+        </div>
     </div>
-
 </body>
 </html>
