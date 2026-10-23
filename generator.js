@@ -248,27 +248,232 @@ const quotes = [
 ];
 
 
+// Temporary data (resets when the page refreshes)
+let history = [];
+let favorites = [];
+let currentQuote = null;
+
+// Get HTML elements
+const navLinks = document.querySelectorAll(".nav-link");
+const pages = document.querySelectorAll(".page");
+const category = document.getElementById("category");
 const quoteText = document.getElementById("quote-text");
 const quoteAuthor = document.getElementById("quote-author");
 const generateBtn = document.getElementById("generate-btn");
-const categorySelect = document.getElementById("category-select");
+const favoriteBtn = document.getElementById("favorite-btn");
+const message = document.getElementById("message");
+const sidebar = document.getElementById("sidebar");
 
-function generateQuote() {
-    let randomIndex = Math.floor(Math.random() * quotes.length);
-    let randomQuote = quotes[randomIndex];
+// Dashboard navigation
+function showPage(pageId) {
+    pages.forEach(function(page) {
+        page.classList.remove("active");
+    });
 
-    if (categorySelect.value === "all") {
-        quoteText.textContent = randomQuote.text;
-        quoteAuthor.textContent = "- " + randomQuote.author;
-    } else {
-        if (randomQuote.category === categorySelect.value) {
-            quoteText.textContent = randomQuote.text;
-            quoteAuthor.textContent = "- " + randomQuote.author;
-        } else {
-            generateQuote();
+    navLinks.forEach(function(link) {
+        link.classList.remove("active");
+    });
+
+    document.getElementById(pageId).classList.add("active");
+
+    navLinks.forEach(function(link) {
+        if (link.dataset.page === pageId) {
+            link.classList.add("active");
         }
+    });
+
+    sidebar.classList.remove("open");
+
+    if (pageId === "history") {
+        displayHistory();
     }
+
+    if (pageId === "favorites") {
+        displayFavorites();
+    }
+
+    updateCounts();
+}
+
+navLinks.forEach(function(link) {
+    link.addEventListener("click", function() {
+        showPage(link.dataset.page);
+    });
+});
+
+document.querySelectorAll("[data-go]").forEach(function(button) {
+    button.addEventListener("click", function() {
+        showPage(button.dataset.go);
+    });
+});
+
+// Mobile menu
+document.getElementById("menu-btn").addEventListener("click", function() {
+    sidebar.classList.toggle("open");
+});
+
+// Generate a quote
+function generateQuote() {
+    let availableQuotes = [];
+
+    if (category.value === "all") {
+        availableQuotes = quotes;
+    } else {
+        availableQuotes = quotes.filter(function(quote) {
+            return quote.category === category.value;
+        });
+    }
+
+    if (availableQuotes.length === 0) {
+        message.textContent = "No quotes available in this category.";
+        return;
+    }
+
+    let randomIndex = Math.floor(Math.random() * availableQuotes.length);
+
+    currentQuote = availableQuotes[randomIndex];
+
+    quoteText.textContent = currentQuote.text;
+    quoteAuthor.textContent = "— " + currentQuote.author;
+    message.textContent = "";
+
+    history.unshift(currentQuote);
+
+    updateCounts();
 }
 
 generateBtn.addEventListener("click", generateQuote);
-categorySelect.addEventListener("change", generateQuote);
+category.addEventListener("change", generateQuote);
+
+// Save a favorite
+favoriteBtn.addEventListener("click", function() {
+    if (currentQuote === null) {
+        message.textContent = "Generate a quote first!";
+        return;
+    }
+
+    let alreadySaved = favorites.some(function(quote) {
+        return quote.text === currentQuote.text;
+    });
+
+    if (alreadySaved) {
+        message.textContent = "This quote is already in your favorites.";
+    } else {
+        favorites.push(currentQuote);
+        message.textContent = "Quote saved to favorites!";
+
+        updateCounts();
+    }
+});
+
+// Display quote history
+function displayHistory() {
+    const historyList = document.getElementById("history-list");
+    historyList.innerHTML = "";
+
+    if (history.length === 0) {
+        historyList.innerHTML =
+            '<p class="empty-message">No quotes generated yet.</p>';
+        return;
+    }
+
+    history.forEach(function(quote) {
+        let item = document.createElement("div");
+        item.className = "quote-item";
+
+        let text = document.createElement("p");
+        text.textContent = "“" + quote.text + "”";
+
+        let author = document.createElement("small");
+        author.textContent = "— " + quote.author;
+
+        item.appendChild(text);
+        item.appendChild(author);
+        historyList.appendChild(item);
+    });
+}
+
+// Display favorite quotes
+function displayFavorites() {
+    const favoritesList = document.getElementById("favorites-list");
+    favoritesList.innerHTML = "";
+
+    if (favorites.length === 0) {
+        favoritesList.innerHTML =
+            '<p class="empty-message">You have no favorite quotes yet.</p>';
+        return;
+    }
+
+    favorites.forEach(function(quote) {
+        let item = document.createElement("div");
+        item.className = "quote-item";
+
+        let text = document.createElement("p");
+        text.textContent = "“" + quote.text + "”";
+
+        let author = document.createElement("small");
+        author.textContent = "— " + quote.author;
+
+        let removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remove from Favorites";
+
+        removeBtn.addEventListener("click", function() {
+            favorites = favorites.filter(function(savedQuote) {
+                return savedQuote.text !== quote.text;
+            });
+
+            displayFavorites();
+            updateCounts();
+        });
+
+        item.appendChild(text);
+        item.appendChild(author);
+        item.appendChild(removeBtn);
+
+        favoritesList.appendChild(item);
+    });
+}
+
+// Update dashboard numbers
+function updateCounts() {
+    document.getElementById("history-count").textContent = history.length;
+    document.getElementById("favorite-count").textContent = favorites.length;
+}
+
+// Display the dummy profile
+const profileName = document.getElementById("profile-name");
+const profileEmail = document.getElementById("profile-email");
+
+profileName.value = user.fullname;
+profileEmail.value = user.email;
+
+document.getElementById("sidebar-name").textContent = user.fullname;
+
+// Edit the dummy profile
+document.getElementById("save-profile").addEventListener("click", function() {
+    const name = profileName.value.trim();
+    const email = profileEmail.value.trim();
+
+    if (name === "" || email === "") {
+        document.getElementById("profile-message").textContent =
+            "Please enter your name and email.";
+        return;
+    }
+
+    user.fullname = name;
+    user.email = email;
+
+    document.getElementById("sidebar-name").textContent = user.fullname;
+
+    document.getElementById("profile-message").textContent =
+        "Profile updated!";
+});
+
+// Demo logout
+document.getElementById("logout-btn").addEventListener("click", function() {
+    alert("Demo logout clicked!");
+});
+
+// Initial setup
+updateCounts();
+generateQuote();
