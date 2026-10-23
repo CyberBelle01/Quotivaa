@@ -1,60 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quotivaa - Quote Generator</title>
+    <title>Quotivaa - Dashboard</title>
     <link rel="stylesheet" href="generator.css">
 </head>
-
 <body>
 
-    <main class="generator">
+    <header class="topbar">
+        <a href="#" class="logo">✦ 📖 Quotivaa</a>
+        <p>Good things take time ✦</p>
+        <button id="menu-btn" aria-label="Toggle menu">☰</button>
+    </header>
 
-        <div class="generator-brand">
-            <a href="index.html">
-                <img src="logo.png" alt="Quotivaa Logo">
-            </a>
+    <aside class="sidebar" id="sidebar">
+        <h4>DASHBOARD</h4>
+
+        <nav>
+            <button class="nav-link active" data-page="overview">⌂ Overview</button>
+            <button class="nav-link" data-page="generate">✦ Generate Quote</button>
+            <button class="nav-link" data-page="history">◷ Quote History</button>
+            <button class="nav-link" data-page="favorites">♡ Favorites</button>
+            <button class="nav-link" data-page="profile">♙ My Profile</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p id="sidebar-name">Welcome!</p>
+            <button id="logout-btn" class="logout-btn">⇥ Log Out</button>
         </div>
+    </aside>
 
-        <h1>Quote Generator</h1>
+    <main class="main-content">
 
-        <p class="welcome-text">
-            Get a little inspiration whenever you need it.
-        </p>
+        <section class="page active" id="overview">
+            <h1>Welcome to Quotivaa ✨</h1>
+            <p class="subtitle">A little inspiration can change your day.</p>
 
+            <div class="stats">
+                <div class="stat-card">
+                    <span>Total Quotes Viewed</span>
+                    <h2 id="history-count">0</h2>
+                </div>
+                <div class="stat-card">
+                    <span>Your Favorites</span>
+                    <h2 id="favorite-count">0</h2>
+                </div>
+            </div>
 
-        
-<div class="category-container">
-    <label for="category-select">Choose a category</label>
+            <div class="panel">
+                <h2>Your daily inspiration</h2>
+                <p>Need a little motivation? Find a quote for this moment.</p>
+                <button class="primary-btn" data-go="generate">
+                    Generate a Quote
+                </button>
+            </div>
+        </section>
 
-    <select id="category-select">
-        <option value="all">All Categories</option>
-        <option value="motivation">Motivation</option>
-        <option value="success">Success</option>
-        <option value="love">Love</option>
-        <option value="wisdom">Wisdom</option>
-        <option value="life">Life</option>
-    </select>
-</div>
+        <section class="page" id="generate">
+            <h1>Your daily inspiration ✨</h1>
+            <p class="subtitle">Find the words you need for this moment.</p>
 
+            <div class="generator">
+                <label for="category">What are you feeling today?</label>
 
-        <div class="quote-hold">
-            <p class="quotes" id="quote-text"></p>
-            <p class="author" id="quote-author"></p>
-        </div>
+                <select id="category">
+                    <option value="all">All Quotes</option>
+                    <option value="motivation">Motivation</option>
+                    <option value="success">Success</option>
+                    <option value="life">Life</option>
+                    <option value="love">Love</option>
+                    <option value="wisdom">Wisdom</option>
+                </select>
 
-        <button class="button" id="generate-btn">
-            Generate Quote
-        </button>
+                <div class="quote-card">
+                    <span class="quote-mark">“</span>
+                    <p id="quote-text">Your next inspiring quote is waiting.</p>
+                    <p id="quote-author">— Quotivaa</p>
+                </div>
 
-        <a href="index.html" class="back-home">
-            ← Back to Home
-        </a>
+                <button id="generate-btn" class="primary-btn">
+                    ↻ Generate Another Quote
+                </button>
+
+                <button id="favorite-btn" class="secondary-btn">
+                    ♡ Save to Favorites
+                </button>
+
+                <p id="message" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section class="page" id="history">
+            <h1>Quote History</h1>
+            <p class="subtitle">Revisit quotes you've generated.</p>
+            <div id="history-list" class="quote-list"></div>
+        </section>
+
+        <section class="page" id="favorites">
+            <h1>My Favorites ♡</h1>
+            <p class="subtitle">Your personally saved quotes.</p>
+            <div id="favorites-list" class="quote-list"></div>
+        </section>
+
+        <section class="page" id="profile">
+            <h1>My Profile</h1>
+            <p class="subtitle">Your Quotivaa account details.</p>
+
+            <div class="panel profile-panel">
+                <label for="profile-name">Full name</label>
+                <input id="profile-name" type="text" placeholder="Enter your name">
+
+                <label for="profile-email">Email address</label>
+                <input id="profile-email" type="email" placeholder="Enter your email">
+
+                <button id="save-profile" class="primary-btn">
+                    Save Profile
+                </button>
+                <p id="profile-message" aria-live="polite"></p>
+            </div>
+        </section>
 
     </main>
 
     <script src="generator.js"></script>
-
 </body>
 </html>
