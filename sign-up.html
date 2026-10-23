@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Quotivaa</title>
-    <link rel="stylesheet" href="sign-up.css">
-</head>
 
-<body>
-    <div class="signup-container" id="signup-container">
-
-        <div class="left-banner" id="left-banner">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,277 +8,112 @@
     <link rel="stylesheet" href="sign-up.css">
 </head>
 <body>
-
     <div class="signup-container">
-        <div class="signup-header">
-            <a href="index.html">
-                <img src="logo-white.png" alt="Quotivaa Logo" class="logo">
-            </a>
 
-            <h1>Create an Account</h1>
-            <p>Join Quotivaa and find your daily inspiration.</p>
-        </div>
+        <div class="left-banner">
+            <div class="banner-content">
+                <a href="index.html" class="brand-logo">
+                    <img src="logo-white.png" alt="Quotivaa Logo">
+                </a>
 
-        <form id="signupForm">
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input
-                    type="text"
-                    id="fullname"
-                    name="fullname"
-                    placeholder="Enter your full name"
-                    autocomplete="name"
-                    required
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Choose a username"
-                    autocomplete="username"
-                    required
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    autocomplete="email"
-                    required
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Create a password"
-                    autocomplete="new-password"
-                    minlength="8"
-                    required
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input
-                    type="password"
-                    id="confirm-password"
-                    name="confirm-password"
-                    placeholder="Confirm your password"
-                    autocomplete="new-password"
-                    minlength="8"
-                    required
-                >
-            </div>
-
-            <p id="message" aria-live="polite"></p>
-
-            <button type="submit" class="btn-signup" id="btn-signup">
-                Sign Up
-            </button>
-        </form>
-
-        <p class="footer-text">
-            Already have an account?
-            <a href="login.html">Log In</a>
-        </p>
-    </div>
-
-    <script src="signup.js"></script>
-</body>
-</html>
-
-            <div class="banner-content" id="banner-content">
-
-                <div class="brand-logo" id="brand-logo">
-                    <h1>Quotivaa</h1>
-                </div>
-
-                <blockquote class="quote-text" id="quote-text">
+                <blockquote class="quote-text">
                     "The future depends on what you do today."
-                    <span class="quote-author" id="quote-author">
-                        — Mahatma Gandhi
-                    </span>
+                    <span class="quote-author">— Mahatma Gandhi</span>
                 </blockquote>
             </div>
-
         </div>
 
-        <div class="right-form-area" id="right-form-area">
-            <div class="form-wrapper" id="form-wrapper">
+        <div class="right-form-area">
+            <div class="form-wrapper">
 
-                <a href="index.html">
-                    <img src="logo.png" alt="Quotivaa Logo" class="form-logo" id="form-logo"></a>
+                <a href="index.html" class="form-logo-link">
+                    <img src="logo-white.png" alt="Quotivaa Logo" class="form-logo">
+                </a>
 
                 <h2>Create your account</h2>
-                <p class="subtitle" id="subtitle">
+                <p class="subtitle">
                     Sign up to start your personal quote experience.
                 </p>
 
-                <form action="generator.html">
-
+                <form id="signupForm">
                     <div class="input-group">
                         <label for="fullname">Full Name</label>
-                        <input type="text" id="fullname" placeholder="Full Name" required>
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Full Name"
+                            autocomplete="name"
+                            required
+                        >
                     </div>
-
 
                     <div class="input-group">
                         <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Username" required>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Choose a username"
+                            autocomplete="username"
+                            required
+                        >
                     </div>
 
                     <div class="input-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="you@example.com" required>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
                     </div>
 
                     <div class="input-group">
                         <label for="password">Password</label>
-
-                        <div class="password-wrapper">
-                            <input type="password" id="password" placeholder="Enter your password" required>
-                        </div>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
                     </div>
+
                     <div class="input-group">
                         <label for="confirm-password">Confirm Password</label>
-
-                        <div class="password-wrapper">
-                            <input
-                                type="password"
-                                id="confirm-password"
-                                placeholder="Confirm your password"
-                                required
-                            >
-                        </div>
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirm-password"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
                     </div>
-                    <button
-                        type="submit"
-                        class="btn-signup"
-                        id="btn-signup"
-                    >
+
+                    <p id="message" aria-live="polite"></p>
+
+                    <button type="submit" class="btn-signup">
                         Sign Up
                     </button>
-                    <p class="footer-text" id="footer-text">
-                        Already have an account?
-                        <a href="login.html">Login</a>
-                    </p>
 
+                    <p class="footer-text">
+                        Already have an account?
+                        <a href="login.html">Log In</a>
+                    </p>
                 </form>
             </div>
         </div>
-    </div>
-        <div class="signup-header" id="signup-header">
-            <div class="logo" id="logo">
-                <a href="index.html">
-                    <img
-                        src="logo.png"
-                        alt="Quotivaa Logo"
-                        class="form-logo"
-                        id="form-logo"
-                    >
-                </a>
-            </div>
 
-            <h2 class="title" id="title">Sign up to your account</h2>
-        </div>
-
-        <form id="signupForm">
-
-            <div class="input-group">
-                <label for="fullname">Full Name</label>
-                <input
-                    type="text"
-                    id="fullname"
-                    name="fullname"
-                    placeholder="Full Name"
-                    autocomplete="name"
-                    required
-                >
-            </div>
-
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Username"
-                    autocomplete="username"
-                    required
-                >
-            </div>
-
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                    autocomplete="email"
-                    required
-                >
-            </div>
-
-            <div class="input-group">
-                <label for="password">Password</label>
-                <div class="password-wrapper">
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Password"
-                        autocomplete="new-password"
-                        required
-                    >
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label for="confirm-password">Confirm Password</label>
-                <div class="password-wrapper" id="password-wrapper">
-                    <input
-                        type="password"
-                        id="confirm-password"
-                        name="confirm-password"
-                        placeholder="Confirm Password"
-                        autocomplete="new-password"
-                        required
-                    >
-                </div>
-            </div>
-
-            <button
-                type="submit"
-                class="btn-signup"
-                id="btn-signup"
-            >
-                Sign Up
-            </button>
-
-            <p id="message" aria-live="polite"></p>
-
-            <p class="footer-text" id="footer-text">
-                Already have an account?
-                <a href="login.html">Login</a>
-            </p>
-
-        </form>
     </div>
 
     <script src="signup.js"></script>
-
 </body>
 </html>
