@@ -695,8 +695,7 @@ nav a:hover {
     width: 100%;
     background-color: #1E1B4B;
     color: #FFFFFF;
-    margin-top: 20px;
-    height: 700px;
+    padding: 45px 0 0;
     
 }
 .footer-container {
@@ -718,8 +717,8 @@ nav a:hover {
 .footer-brand p {
     max-width: 350px;
     font-family: sans-serif;
-    font-size: 20px;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.7;
     color: #CBD5E1;
     margin-top: 15px;
 }
@@ -737,7 +736,7 @@ nav a:hover {
 }
 .footer-links a {
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #FFFFFF;
     text-decoration: none;
     margin-bottom: 12px;

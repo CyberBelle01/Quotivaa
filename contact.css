@@ -174,11 +174,7 @@ nav a:hover {
     
 }
 .contact-information {
-    background: linear-gradient(
-        145deg,
-        #1E1B4B,
-        #0235AD
-    );
+   
     padding: 40px;
     border-radius: 16px;
     color: white;
@@ -187,7 +183,7 @@ nav a:hover {
 .contact-information h3 {
     font-size: 25px;
     margin-bottom: 35px;
-    color: white;
+    color: #1E1B4B;
 }
 .information-item {
     display: flex;
@@ -210,13 +206,13 @@ nav a:hover {
     height: 22px;
 }
 .information-text h4 {
-    font-size: 14px;
-    color: #89CFEF;
+    font-size: 16px;
+    color: #1E1B4B;
     margin-bottom: 4px;
 }
 .information-text p {
-    font-size: 14px;
-    color: #F8FAFC;
+    font-size: 15px;
+    color: #89CFEF;
 }
 .contact-socials {
     display: flex;
@@ -241,6 +237,7 @@ nav a:hover {
     background-color: #89CFEF;
     transform: translateY(-3px);
 }
+/* FOOTER */
 .footer {
     width: 100%;
     background-color: #1E1B4B;
@@ -259,7 +256,7 @@ nav a:hover {
 }
 .footer-brand img {
     width: 150px;
-    height: auto;
+    height: 100px;
     object-fit: contain;
     display: block;
 }
@@ -335,6 +332,37 @@ nav a:hover {
     font-size: 14px;
     color: #D9EFFF;
 }
+/* QUOTIVAAA */
+.brand-section {
+    padding: 45px 3% 20px;
+    overflow: hidden;
+    /* background: #FFFFFF; */
+}
+.brand-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.brand-tagline {
+    margin: 0 0 15px;
+    text-align: center;
+    color: #89CFEF;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.brand-wordmark {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.brand-wordmark span {
+    display: block;
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 0.95;
+    color:  white;
+}
+
 
 
 /* RESPONSIVENESS */
@@ -477,5 +505,28 @@ nav a:hover {
         flex-direction: column;
         text-align: center;
         align-items: center;
+    }
+    /* QUOTIVAA */
+    .brand-section {
+        padding: 35px 3% 15px;
+    }
+    .brand-container {
+        width: 100%;
+    }
+    .brand-tagline {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    .brand-wordmark {
+        width: 100%;
+        overflow: hidden;
+    }
+    .brand-wordmark span {
+        font-size: clamp(42px, 12.5vw, 90px);
+        line-height: 1;
+        letter-spacing: -2px;
+        white-space: nowrap;
     }
 }
