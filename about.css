@@ -206,6 +206,84 @@ nav a:hover {
     line-height: 1.5;
 }
 
+.our-team {
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px 6% 70px;
+    text-align: center;
+    /* background-color: #0235AD; */
+}
+.eyebrow {
+    display: inline-block;
+    color: #0235AD;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.our-team h1 {
+    font-size: 44px;
+    color: #1E1B4B;
+    margin-bottom: 15px;
+}
+.our-team p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #64748B;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    width: 100%;
+    /* background-color: chartreuse; */
+}
+.team-group {
+    flex: 1;
+    background-color: white;
+    padding: 20px 25px 10px 25px;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 10px 30px rgba(2, 53, 173, 0.07);
+    transition: 0.3s ease;
+}
+.team-group:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(2, 53, 173, 0.15);
+}
+.team-members {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #89CFEF;
+    background-color: #E6F4FF;
+}
+.team-members img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team-group h3 {
+    font-size: 22px;
+    color: #1E1B4B;
+    margin-bottom: 5px;
+}
+.team-group h5 {
+    font-size: 15px;
+    color: #0235AD;
+    margin-bottom: 12px;
+}
+.team-group p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #64748B;
+}
+
+
 .footer {
     width: 100%;
     background-color: #1E1B4B;
@@ -361,6 +439,32 @@ nav a:hover {
     .book-graphic {
         width: 280px;
         height: 230px;
+    }
+
+    .our-team {
+        padding-top: 160px;
+    }
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        width: 100%;
+    }
+    .team-group {
+        min-width: 0;
+        padding: 25px 15px;
+    }
+    .team-members {
+        width: 140px;
+        height: 140px;
+        max-width: 100%;
+        margin: 0 auto 20px;
+        overflow: hidden;
+    }
+    .team-members img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .footer-container {
@@ -527,6 +631,20 @@ nav a:hover {
 
     .purpose-card p {
         font-size: 14px;
+    }
+
+    .our-team {
+        padding: 140px 6% 50px;
+    }
+    .our-team h1 {
+        font-size: 34px;
+    }
+    .our-team p {
+        font-size: 14px;
+    }
+    .team-container {
+        flex-direction: column;
+       gap: 20px;
     }
 
     .footer-container {
