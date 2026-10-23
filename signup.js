@@ -10,17 +10,18 @@ signupForm.addEventListener("submit", function (event) {
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirm-password").value;
     const message = document.getElementById("message");
+    const signupButton = signupForm.querySelector('button[type="submit"]');
 
     message.textContent = "";
     message.style.color = "red";
 
-    if (password !== confirmPassword) {
-        message.textContent = "Passwords do not match!";
+    if (password.length < 8) {
+        message.textContent = "Password must be at least 8 characters.";
         return;
     }
 
-    if (password.length < 8) {
-        message.textContent = "Password must be at least 8 characters.";
+    if (password !== confirmPassword) {
+        message.textContent = "Passwords do not match.";
         return;
     }
 
@@ -33,7 +34,7 @@ signupForm.addEventListener("submit", function (event) {
             users = [];
         }
     } catch (error) {
-        message.textContent = "Could not read saved accounts.";
+        message.textContent = "Could not read saved accounts. Please try again.";
         return;
     }
 
@@ -67,14 +68,13 @@ signupForm.addEventListener("submit", function (event) {
     try {
         localStorage.setItem("users", JSON.stringify(users));
     } catch (error) {
-        message.textContent = "Could not save your account. Try again.";
+        message.textContent = "Could not save your account. Please try again.";
         return;
     }
 
     message.style.color = "green";
     message.textContent = "Account created! Redirecting to login...";
-
-    signupForm.querySelector('button[type="submit"]').disabled = true;
+    signupButton.disabled = true;
 
     setTimeout(function () {
         window.location.href = "login.html";

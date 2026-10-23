@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #F8FAFC;
     min-height: 100vh;
     display: flex;
@@ -17,43 +18,41 @@ body {
 .signup-container {
     display: flex;
     width: 900px;
+    max-width: 100%;
     min-height: 620px;
     background-color: #FFFFFF;
     border-radius: 16px;
-    box-shadow:
-        rgba(30, 27, 75, 0.15) 0px 8px 24px;
-
+    box-shadow: 0 8px 24px rgba(30, 27, 75, 0.15);
     overflow: hidden;
 }
 
 .left-banner {
     flex: 1;
-    background:
-        linear-gradient(
-            rgba(2, 53, 173, 0.5),
-            rgba(30, 27, 75, 0.9)
-        ),
-        url('background2.jpg');
+    background-color: #101D55;
+    background-image: url("background2.jpg");
     background-size: cover;
     background-position: center;
     padding: 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
     color: #FFFFFF;
 }
 
+.banner-content {
+    width: 100%;
+}
+
 .brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: inline-block;
     margin-bottom: 80px;
 }
 
-.brand-logo h1 {
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+.brand-logo img {
+    display: block;
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .quote-text {
@@ -66,7 +65,7 @@ body {
 .quote-author {
     display: block;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     color: #89CFEF;
     margin-top: 15px;
 }
@@ -76,44 +75,38 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 40px;
-    overflow: hidden;
+    padding: 35px 40px;
 }
-
 
 .form-wrapper {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
 }
 
-.form-wrapper > a {
+.form-logo-link {
     display: block;
-    text-decoration: none;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 10px;
 }
-
 
 .form-logo {
-    height: 105px;
-    width: auto;
     display: block;
-    margin: 0 auto 8px auto;
+    width: 140px;
+    max-height: 75px;
+    object-fit: contain;
 }
 
 .right-form-area h2 {
     color: #1E1B4B;
     font-size: 27px;
-    font-weight: 700;
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .subtitle {
-    font-size: 12px;
+    font-size: 13px;
     color: #64748B;
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: center;
     margin-bottom: 22px;
 }
@@ -122,63 +115,59 @@ body {
     margin-bottom: 14px;
 }
 
-
 .input-group label {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: #1E1B4B;
     margin-bottom: 6px;
 }
 
-
 .input-group input {
     width: 100%;
-    padding: 11px 16px;
+    padding: 11px 13px;
     font-size: 14px;
     border: 1px solid #E2E8F0;
     border-radius: 8px;
     background-color: #F8FAFC;
     color: #1E1B4B;
     outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
 }
-
 
 .input-group input:focus {
     border-color: #0235AD;
-    box-shadow:
-        0 0 0 3px rgba(2, 53, 173, 0.08);
-}
-
-.password-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
+    box-shadow: 0 0 0 3px rgba(2, 53, 173, 0.08);
 }
 
 .btn-signup {
     display: block;
-    text-align: center;
     width: 100%;
-    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 12px;
     background-color: #0235AD;
     color: #FFFFFF;
-    padding: 12px;
+    font-family: inherit;
     font-size: 14px;
     font-weight: 600;
-    font-family: inherit;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
-
 
 .btn-signup:hover {
     background-color: #1E1B4B;
 }
 
+.btn-signup:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#message {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
 
 .footer-text {
     text-align: center;
@@ -186,64 +175,27 @@ body {
     color: #64748B;
     line-height: 1.6;
     margin-top: 18px;
-    margin-bottom: 0;
 }
-
 
 .footer-text a {
     color: #0235AD;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s;
 }
-
 
 .footer-text a:hover {
     color: #1E1B4B;
     text-decoration: underline;
 }
 
-
-
-@media (max-width: 1024px) {
-
-    .signup-container {
-        width: 768px;
-        min-height: 620px;
-    }
-
-    .left-banner {
-        padding: 30px;
-    }
-
-    .brand-logo {
-        margin-bottom: 50px;
-    }
-
-    .quote-text {
-        font-size: 20px;
-    }
-
-    .right-form-area {
-        padding: 25px 30px;
-    }
-}
-
-
 @media (max-width: 768px) {
-
     body {
-        align-items: flex-start;
-        padding-top: 60px;
+        padding: 20px;
     }
 
     .signup-container {
-        width: 100%;
         max-width: 440px;
         min-height: auto;
-        flex-direction: column;
-        box-shadow: none;
-        background-color: transparent;
     }
 
     .left-banner {
@@ -252,67 +204,29 @@ body {
 
     .right-form-area {
         width: 100%;
-        background-color: #FFFFFF;
-        border-radius: 16px;
-        padding: 40px 30px;
-        box-shadow:
-            rgba(30, 27, 75, 0.1) 0px 8px 24px;
-    }
-
-    .form-logo {
-        height: 100px;
+        padding: 35px 25px;
     }
 }
 
-
 @media (max-width: 480px) {
-
     body {
         background-color: #FFFFFF;
-        align-items: flex-start;
-        padding-top: 20px;
+        padding: 10px;
     }
 
     .signup-container {
-        max-width: 100%;
         box-shadow: none;
     }
 
     .right-form-area {
-        padding: 25px 20px;
-    }
-
-    .form-logo {
-        height: 85px;
-        margin-bottom: 6px;
+        padding: 25px 15px;
     }
 
     .right-form-area h2 {
         font-size: 24px;
     }
 
-    .subtitle {
-        font-size: 12px;
-        margin-bottom: 20px;
-    }
-
-    .input-group {
-        margin-bottom: 13px;
-    }
-
-    .input-group input {
-        padding: 11px 12px;
-        font-size: 14px;
-    }
-
-    .btn-signup {
-        padding: 12px;
-        font-size: 15px;
-        margin-top: 5px;
-    }
-
-    .footer-text {
-        font-size: 13px;
-        margin-top: 18px;
+    .form-logo {
+        width: 120px;
     }
 }
