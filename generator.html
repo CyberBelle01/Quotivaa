@@ -4,66 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quotivaa - Dashboard</title>
+    <title>Quotivaa | Your Dashboard</title>
     <link rel="stylesheet" href="generator.css">
 </head>
 <body>
 
     <header class="topbar">
-        <a href="#" class="logo">✦ 📖 Quotivaa</a>
-        <p>Good things take time ✦</p>
-        <button id="menu-btn" aria-label="Toggle menu">☰</button>
+        <a href="index.html" class="logo" aria-label="Quotivaa home">
+            <img src="logo-white.png" alt="Quotivaa Logo">
+        </a>
+
+        <button id="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
     </header>
 
     <aside class="sidebar" id="sidebar">
-        <h4>DASHBOARD</h4>
-
-        <nav>
-            <button class="nav-link active" data-page="overview">⌂ Overview</button>
-            <button class="nav-link" data-page="generate">✦ Generate Quote</button>
-            <button class="nav-link" data-page="history">◷ Quote History</button>
-            <button class="nav-link" data-page="favorites">♡ Favorites</button>
-            <button class="nav-link" data-page="profile">♙ My Profile</button>
+        <nav aria-label="Dashboard navigation">
+            <button class="nav-link active" data-page="overview">Overview</button>
+            <button class="nav-link" data-page="generate">Generate Quote</button>
+            <button class="nav-link" data-page="history">Quote History</button>
+            <button class="nav-link" data-page="favorites">Favorites</button>
+            <button class="nav-link" data-page="profile">My Profile</button>
         </nav>
 
         <div class="sidebar-bottom">
-            <p id="sidebar-name">Welcome!</p>
-            <button id="logout-btn" class="logout-btn">⇥ Log Out</button>
+            <p id="sidebar-name">Your account</p>
+            <button id="logout-btn" class="logout-btn">Log Out</button>
         </div>
     </aside>
 
     <main class="main-content">
 
+        <!-- Overview -->
         <section class="page active" id="overview">
-            <h1>Welcome to Quotivaa ✨</h1>
-            <p class="subtitle">A little inspiration can change your day.</p>
+            <p class="eyebrow">YOUR PERSONAL DASHBOARD</p>
+            <h1 id="greeting">Welcome to Quotivaa!</h1>
+            <p class="subtitle" id="welcome-message">
+                A little inspiration can change your day.
+            </p>
+            <p class="username" id="username-display"></p>
 
             <div class="stats">
                 <div class="stat-card">
-                    <span>Total Quotes Viewed</span>
-                    <h2 id="history-count">0</h2>
+                    <span>Quotes Generated</span>
+                    <h2 id="generated-count">0</h2>
                 </div>
+
                 <div class="stat-card">
-                    <span>Your Favorites</span>
+                    <span>Favorites</span>
                     <h2 id="favorite-count">0</h2>
                 </div>
             </div>
 
             <div class="panel">
-                <h2>Your daily inspiration</h2>
-                <p>Need a little motivation? Find a quote for this moment.</p>
+                <h2>A little inspiration</h2>
+                <p>Find a quote that speaks to you today.</p>
                 <button class="primary-btn" data-go="generate">
                     Generate a Quote
                 </button>
             </div>
+
+            <div class="panel recent-panel">
+                <h2>Recently viewed</h2>
+                <div id="recent-quote">
+                    Your recent quote will appear here.
+                </div>
+            </div>
         </section>
 
+        <!-- Quote generator -->
         <section class="page" id="generate">
-            <h1>Your daily inspiration ✨</h1>
-            <p class="subtitle">Find the words you need for this moment.</p>
+            <h1>Quote Generator</h1>
+            <p class="subtitle">A few words can make a difference.</p>
 
-            <div class="generator">
-                <label for="category">What are you feeling today?</label>
+            <div class="panel generator">
+                <label for="category">Choose a category</label>
 
                 <select id="category">
                     <option value="all">All Quotes</option>
@@ -75,13 +91,13 @@
                 </select>
 
                 <div class="quote-card">
-                    <span class="quote-mark">“</span>
+                    <p class="quote-mark">“</p>
                     <p id="quote-text">Your next inspiring quote is waiting.</p>
                     <p id="quote-author">— Quotivaa</p>
                 </div>
 
                 <button id="generate-btn" class="primary-btn">
-                    ↻ Generate Another Quote
+                    Generate Another Quote
                 </button>
 
                 <button id="favorite-btn" class="secondary-btn">
@@ -92,32 +108,39 @@
             </div>
         </section>
 
+        <!-- History -->
         <section class="page" id="history">
             <h1>Quote History</h1>
-            <p class="subtitle">Revisit quotes you've generated.</p>
+            <p class="subtitle">Quotes you've generated.</p>
             <div id="history-list" class="quote-list"></div>
         </section>
 
+        <!-- Favorites -->
         <section class="page" id="favorites">
-            <h1>My Favorites ♡</h1>
-            <p class="subtitle">Your personally saved quotes.</p>
+            <h1>Favorites</h1>
+            <p class="subtitle">Quotes you've saved.</p>
             <div id="favorites-list" class="quote-list"></div>
         </section>
 
+        <!-- Profile -->
         <section class="page" id="profile">
             <h1>My Profile</h1>
-            <p class="subtitle">Your Quotivaa account details.</p>
+            <p class="subtitle">Manage your account information.</p>
 
             <div class="panel profile-panel">
                 <label for="profile-name">Full name</label>
-                <input id="profile-name" type="text" placeholder="Enter your name">
+                <input id="profile-name" type="text" autocomplete="name" required>
+
+                <label for="profile-username">Username</label>
+                <input id="profile-username" type="text" disabled>
 
                 <label for="profile-email">Email address</label>
-                <input id="profile-email" type="email" placeholder="Enter your email">
+                <input id="profile-email" type="email" autocomplete="email" required>
 
                 <button id="save-profile" class="primary-btn">
-                    Save Profile
+                    Save Changes
                 </button>
+
                 <p id="profile-message" aria-live="polite"></p>
             </div>
         </section>

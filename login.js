@@ -8,26 +8,53 @@ loginForm.addEventListener("submit", function (event) {
     const password = document.getElementById("password").value;
     const message = document.getElementById("message");
 
-    const users = JSON.parse(localStorage.getItem("users") || "[]");
+    message.style.color = "red";
+    message.textContent = "";
 
-    const user = users.find(function (user) {
-        return user.email === email && user.password === password;
-    });
+    let users;
 
-    if (!user) {
-        message.textContent = "Incorrect email or password!";
+    try {
+        users = JSON.parse(localStorage.getItem("users") || "[]");
+
+        if (!Array.isArray(users)) {
+            users = [];
+        }
+    } catch (error) {
+        message.textContent = "Could not read saved accounts.";
         return;
     }
 
-    localStorage.setItem("loggedInUser", JSON.stringify({
+    const user = users.find(function (account) {
+        return (
+            account.email.toLowerCase() === email &&
+            account.password === password
+        );
+    });
+
+    if (!user) {
+        message.textContent = "Incorrect email or password.";
+        return;
+    }
+
+    const loggedInUser = {
         fullName: user.fullName,
         username: user.username,
         email: user.email
-    }));
+    };
 
-    message.textContent = "Login successful!";
+    try {
+        localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+    } catch (error) {
+        message.textContent = "Login could not be completed. Try again.";
+        return;
+    }
+
+    message.style.color = "green";
+    message.textContent = "Login successful! Opening your dashboard...";
+
+    loginForm.querySelector('button[type="submit"]').disabled = true;
 
     setTimeout(function () {
         window.location.href = "generator.html";
-    }, 1000);
+    }, 700);
 });
