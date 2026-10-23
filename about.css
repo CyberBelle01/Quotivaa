@@ -476,6 +476,33 @@ nav a:hover {
         object-fit: cover;
     }
 
+    
+    .brand-section {
+        padding: 40px 3% 18px;
+    }
+
+    .brand-container {
+        width: 100%;
+    }
+
+    .brand-tagline {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .brand-wordmark {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .brand-wordmark span {
+        font-size: clamp(90px, 16vw, 165px);
+        line-height: 0.95;
+        letter-spacing: -3px;
+        white-space: nowrap;
+    }
+
     .footer-container {
         grid-template-columns: 1fr 1fr;
         gap: 40px 20px;
@@ -656,6 +683,30 @@ nav a:hover {
        gap: 20px;
     }
 
+    
+    .brand-section {
+        padding: 35px 3% 15px;
+    }
+    .brand-container {
+        width: 100%;
+    }
+    .brand-tagline {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    .brand-wordmark {
+        width: 100%;
+        overflow: hidden;
+    }
+    .brand-wordmark span {
+        font-size: clamp(42px, 12.5vw, 90px);
+        line-height: 1;
+        letter-spacing: -2px;
+        white-space: nowrap;
+    }
+    
     .footer-container {
         width: 88%;
         grid-template-columns: 1fr;
