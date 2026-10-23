@@ -139,12 +139,12 @@ nav a:hover {
     font-size: 50px;
     font-weight: 750;
     line-height: 1.2;
-    color:  #1E1B4B;
+    color: white;
     margin-bottom: 22px;
 }
 .herotext h1 span {
     display: block;
-    color: #89CFEF;
+    color: black;
     font-weight: 700;
 }
 .herotext p {
